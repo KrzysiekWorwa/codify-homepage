@@ -1,1 +1,21 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+* {
+  box-sizing: border-box;
+}
+@theme {
+  --font-sans: "Poppins", sans-serif;
+  --color-primary: #181a17;
+  --color-secondary: #FBFBFE;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+    background-color: #FBFBFE;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
