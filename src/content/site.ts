@@ -1,0 +1,17 @@
+export const SITE = {
+  lang: "pl",
+  name: "Codify",
+  url: "https://codifystudio.pl",
+
+  seo: {
+    title: "Codify – Nowoczesne strony i wizualizacje dla Twojego biznesu",
+    description:
+      "Projektujemy nowoczesne strony WWW, wizualizacje 3D i wirtualne spacery 360. Łączymy technologię z estetyką, pomagając firmom skutecznie i profesjonalnie zaistnieć online.",
+    ogImage: "https://codifystudio.pl/baner.png",
+  },
+
+  icons: {
+    favicon: "/logo.svg",
+    appleTouch: "/logo.png",
+  },
+};

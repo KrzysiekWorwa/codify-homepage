@@ -1,21 +1,17 @@
 ---
 import Header from "../components/Header.astro";
+import { SITE } from "../content/site";
 ---
 
-<html lang="pl">
+<html lang={SITE.lang}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>
-            Codify – Nowoczesne strony i wizualizacje dla Twojego biznesu
-        </title>
-        <meta
-            name="description"
-            content="Projektujemy nowoczesne strony WWW, wizualizacje 3D i wirtualne spacery 360. Łączymy technologię z estetyką, pomagając firmom skutecznie i profesjonalnie zaistnieć online."
-        />
-        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <title>{SITE.seo.title}</title>
+        <meta name="description" content={SITE.seo.description} />
+        <link rel="icon" type="image/svg+xml" href={SITE.icons.favicon} />
+        <link rel="apple-touch-icon" href={SITE.icons.appleTouch} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -23,17 +19,11 @@ import Header from "../components/Header.astro";
             rel="stylesheet"
         />
 
-        <meta
-            property="og:title"
-            content="Codify – Nowoczesne strony i wizualizacje dla Twojego biznesu"
-        />
-        <meta
-            property="og:description"
-            content="Projektujemy nowoczesne strony WWW, wizualizacje 3D i wirtualne spacery 360. Łączymy technologię z estetyką, pomagając firmom skutecznie i profesjonalnie zaistnieć online."
-        />
+        <meta property="og:title" content={SITE.seo.title} />
+        <meta property="og:description" content={SITE.seo.description} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://codifystudio.pl/baner.png" />
-        <meta property="og:url" content="https://codifystudio.pl/" />
+        <meta property="og:image" content={SITE.seo.ogImage} />
+        <meta property="og:url" content={SITE.url} />
         <meta name="generator" content={Astro.generator} />
     </head>
 
