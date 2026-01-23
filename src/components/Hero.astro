@@ -1,5 +1,6 @@
 ---
 import { HERO } from "../content/hero";
+import Typewriter from "astro-typewriter";
 ---
 
 <section id={HERO.id} class="relative mt-30 overflow-hidden">
@@ -17,16 +18,21 @@ import { HERO } from "../content/hero";
                 {HERO.h1}
             </h1>
             <h2
-                class="mt-3 text-3xl text-center
-         bg-gradient-to-r from-[#E7E7E7] to-[#4B4B4B]
+                class="text-4xl text-center
+         bg-gradient-to-b from-[#E7E7E7] to-[#4B4B4B]
          bg-clip-text text-transparent"
             >
-                <span id="typed-subtitle">{HERO.h2}</span>
+                <Typewriter messages={HERO.h2} class="tw" />
             </h2>
         </div>
     </div>
 </section>
-
+<style>
+    .tw::part(typewriter)::after {
+        content: "";
+        color: #4b4b4b;
+    }
+</style>
 <script
     is:inline
     src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
@@ -58,22 +64,5 @@ import { HERO } from "../content/hero";
             },
         },
         retina_detect: true,
-    });
-</script>
-<script is:inline src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script client:load>
-    if (window.innerWidth < 768) return;
-
-    new Typed("#typed-subtitle", {
-        strings: [
-            "nowoczesne strony WWW",
-            "wizualizacje 3D",
-            "wirtualne spacery 360°",
-        ],
-        typeSpeed: 40,
-        backSpeed: 25,
-        backDelay: 1600,
-        loop: true,
-        showCursor: true,
     });
 </script>
