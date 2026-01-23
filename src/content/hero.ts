@@ -3,7 +3,7 @@ export const HERO = {
     h1: "Zamień swoją ofertę w wirtualne doświadczenie",
       h2: [
     "Nowoczesne strony internetowe",
-    "Wizualizacje 3D",
     "Wirtualne spacery 360°",
+    "Wizualizacje 3D",
   ],
 }

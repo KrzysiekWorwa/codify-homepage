@@ -3,12 +3,9 @@ import { HERO } from "../content/hero";
 import Typewriter from "astro-typewriter";
 ---
 
-<section id={HERO.id} class="relative mt-30 overflow-hidden">
-    <!-- particles jako tło -->
-
-    <!-- content -->
+<section id={HERO.id}>
     <div
-        class="relative mx-10 mb-10 h-[calc(100vh-120px-2.5rem)] md:h-[calc(100vh-120px-2.5rem)] flex items-center justify-center bg-[linear-gradient(180deg,rgba(38,40,52,1)_50%,rgba(0,0,0,1)_100%)] rounded-4xl"
+        class="relative h-[100vh] flex items-center justify-center bg-[linear-gradient(180deg,rgba(38,40,52,1)_30%,rgba(0,0,0,1)_100%)]"
     >
         <div id="particles-js" class="absolute inset-0 z-0"></div>
         <div>
@@ -18,7 +15,7 @@ import Typewriter from "astro-typewriter";
                 {HERO.h1}
             </h1>
             <h2
-                class="text-4xl text-center
+                class="text-5xl text-center
          bg-gradient-to-b from-[#E7E7E7] to-[#4B4B4B]
          bg-clip-text text-transparent"
             >
@@ -29,7 +26,6 @@ import Typewriter from "astro-typewriter";
 </section>
 <style>
     .tw::part(typewriter)::after {
-        content: "";
         color: #4b4b4b;
     }
 </style>
