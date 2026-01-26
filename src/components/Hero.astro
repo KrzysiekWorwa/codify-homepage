@@ -7,28 +7,28 @@ import Typewriter from "astro-typewriter";
     <div
         class="relative h-[100vh] flex items-center justify-center bg-[linear-gradient(180deg,rgba(38,40,52,1)_25%,rgba(0,0,0,1)_100%)]"
     >
-        <div id="particles-js" class="absolute inset-0 z-0"></div>
-        <div data-aos="fade-up">
+        <div id="particles-js" class="absolute inset-0 z-10"></div>
+        <div data-aos="fade-up" class="mx-2">
             <h1
-                class="text-[5vw] font-medium text-center leading-tight tracking-tight bg-gradient-to-b from-[#E7E7E7] to-[#4B4B4B] bg-clip-text text-transparent"
+                class="text-[clamp(2.5rem,6vw,8rem)] font-medium text-center leading-tight tracking-tight bg-gradient-to-b from-secondary to-primary bg-clip-text text-transparent"
             >
                 {HERO.h1}
             </h1>
             <h2
-                class="text-[2vw] text-center
-         bg-gradient-to-b from-[#E7E7E7] to-[#4B4B4B]
-         bg-clip-text text-transparent"
+                class="text-[clamp(1.25rem,3vw,3rem)] text-center bg-gradient-to-b from-secondary to-primary bg-clip-text text-transparent"
             >
                 <Typewriter messages={HERO.h2} class="tw" />
             </h2>
         </div>
     </div>
 </section>
+
 <style>
     .tw::part(typewriter)::after {
         color: #4b4b4b;
     }
 </style>
+
 <script
     is:inline
     src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
@@ -51,7 +51,10 @@ import Typewriter from "astro-typewriter";
             },
         },
         interactivity: {
-            events: { onhover: { enable: true, mode: "repulse" } },
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "repulse" },
+            },
             modes: {
                 repulse: {
                     distance: 150,
