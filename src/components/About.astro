@@ -1,0 +1,48 @@
+---
+import ContentHeader from "./ContentHeader.astro";
+import { Picture } from "astro:assets";
+import Button from "./Button.astro";
+import image from "../assets/images/about.jpg";
+---
+
+<section id="about">
+    <div
+        class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 items-center justify-center m-auto my-5 md:my-15 md:pb-5 pb-10 px-5 lg:px-15 max-w-[1440px]"
+    >
+        <div class="text-white">
+            <ContentHeader text="O nas" />
+
+            <div
+                class="prose prose-invert max-w-none text-justify leading-6 prose-p:my-2 text-lg text-primary md:text-xl"
+            >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Officiis impedit earum temporibus, libero cumque officia vero
+                pariatur eligendi enim error suscipit aut nihil quas accusantium
+                quam maiores voluptates atque quidem.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias suscipit fugiat ullam, fugit nemo ab! Placeat nam deserunt adipisci quia veritatis. Doloribus eveniet facere aut eligendi, reprehenderit aspernatur alias!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, minus obcaecati amet necessitatibus, corrupti accusamus distinctio adipisci quaerat tempore culpa ut ex exercitationem molestiae, unde quod facere itaque tempora deserunt.
+            </div>
+
+            {
+                (
+                    <div class="py-7 text-center">
+                        <Button text="lalala" href="#offer" />
+                    </div>
+                )
+            }
+        </div>
+
+        <div>
+            <Picture
+                src={image}
+                alt="about"
+                width={720}
+                height={480}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+                decoding="async"
+                class="object-cover justify-self-center w-full lg:h-auto"
+            />
+        </div>
+    </div>
+</section>

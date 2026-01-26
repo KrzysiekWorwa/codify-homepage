@@ -1,5 +1,5 @@
 export const HERO = {
-  id: "#home",
+  id: "home",
   h1: "Zamień swoją ofertę w wirtualne doświadczenie",
   h2: [
     "Nowoczesne strony internetowe",
@@ -11,7 +11,7 @@ export const HERO = {
     label: "O nas",
   },
   buttonOffer: {
-    href: "#offer",
+    href: "offer",
     label: "Oferta",
   }
 }
