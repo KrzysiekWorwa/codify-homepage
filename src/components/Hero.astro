@@ -6,10 +6,9 @@ import Button from "./Button.astro";
 
 <section id={HERO.id}>
     <div
-        class="relative h-screen flex items-center justify-center bg-[linear-gradient(180deg,rgba(38,40,52,1)_25%,rgba(0,0,0,1)_100%)] text-center"
+        class="relative flex flex-col h-screen flex items-center justify-center bg-[linear-gradient(180deg,rgba(38,40,52,1)_25%,rgba(0,0,0,1)_100%)] text-center"
     >
-        <div id="particles-js" class="absolute inset-0 pointer-events-none">
-        </div>
+        <div id="particles-js" class="absolute inset-0 z-10"></div>
         <div data-aos="fade-up" class="mx-2">
             <h1
                 class="text-[clamp(2.5rem,6vw,8rem)] font-medium leading-tight tracking-tight bg-linear-to-r from-secondary from-0% via-secondary via-50% to-primary to-100% bg-clip-text text-transparent"
@@ -21,13 +20,15 @@ import Button from "./Button.astro";
             >
                 <Typewriter messages={HERO.h2} class="tw" />
             </h2>
-            <div class="mt-10 flex gap-3 sm:gap-10 justify-center">
-                <Button href={HERO.button.href} text={HERO.button.label} />
-                <Button
-                    href={HERO.buttonOffer.href}
-                    text={HERO.buttonOffer.label}
-                />
-            </div>
+        </div>
+        <div
+            class="relative z-20 mt-3 md:mt-10 flex gap-3 sm:gap-10 justify-center"
+        >
+            <Button href={HERO.button.href} text={HERO.button.label} />
+            <Button
+                href={HERO.buttonOffer.href}
+                text={HERO.buttonOffer.label}
+            />
         </div>
     </div>
 </section>
@@ -60,7 +61,7 @@ import Button from "./Button.astro";
             },
         },
         interactivity: {
-            detect_on: "window",
+            detect_on: "canvas",
             events: {
                 onhover: { enable: true, mode: "repulse" },
                 onclick: { enable: true, mode: "repulse" },
