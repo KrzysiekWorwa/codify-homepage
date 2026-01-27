@@ -8,10 +8,12 @@ import { ABOUT } from "../content/about";
 ---
 
 <section id={ABOUT.id}>
-    <div class="max-w-360 items-center justify-center m-auto my-5 md:my-15">
+    <div
+        class="max-w-360 items-center justify-center m-auto my-5 md:my-15 px-5 lg:px-0"
+    >
         <ContentHeader text={ABOUT.header} />
         <div
-            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 px-5 lg:px-15 items-center justify-center"
+            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 lg:px-15 items-center justify-center"
         >
             <div>
                 <ContentSubHeader text={ABOUT.subHeader} />
