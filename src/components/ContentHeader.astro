@@ -1,7 +1,9 @@
 ---
-const {text} = Astro.props;
+const { text } = Astro.props;
 ---
 
-<h2 class="text-center text-primary leading-tight text-5xl md:text-6xl xl:text-8xl font-bold my-5 md:my-15">
-{text}
+<h2
+    class="text-center bg-linear-to-b from-primary to-accent bg-clip-text text-transparent text-[clamp(2rem,4.5vw,7rem)] leading-tight font-bold my-5 md:my-15"
+>
+    {text}
 </h2>
