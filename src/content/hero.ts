@@ -11,7 +11,7 @@ export const HERO = {
     label: "O nas",
   },
   buttonOffer: {
-    href: "services",
+    href: "#services",
     label: "Usługi",
   }
 }
