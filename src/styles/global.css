@@ -7,10 +7,10 @@
 @theme {
   --font-sans: "Poppins", sans-serif;
   --color-primary: #1F2226;
-  --color-secondary: #E7E7E7;
+  --color-secondary: #f8f8f8;
   --color-accent: #D96725;
   --color-accent-hover: #D95323;
-  --color-primary-lighter: #262834;
+  --color-primary-lighter: #2C3540;
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-color: #E7E7E7;
+    background-color: #f8f8f8;
     margin: 0 auto;
     overflow-x: hidden;
 }
