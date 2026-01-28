@@ -1,59 +1,30 @@
 ---
-
+import { SERVICES } from "../content/services";
 ---
 
 <div
     class="py-15 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10 lg:px-15 items-center justify-center"
 >
-    <div class="flex flex-col gap-7 bg-white py-15 px-10">
-        <div>💻</div>
-        <div>
-            <h4 class="text-xl font-semibold">Tworzenie stron internetowych</h4>
-        </div>
-        <div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                modi rerum exercitationem dolor tempora illum quis cum dolorum
-                saepe reiciendis tenetur molestiae nostrum, officia architecto,
-                at, harum id consequuntur porro!
-            </p>
-        </div>
-        <div>
-            <p>Kliknij po więcej szczegółów</p>
-        </div>
-    </div>
-        <div class="flex flex-col gap-7 bg-white py-15 px-10">
-        <div>💻</div>
-        <div>
-            <h4 class="text-xl font-semibold">Tworzenie stron internetowych</h4>
-        </div>
-        <div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                modi rerum exercitationem dolor tempora illum quis cum dolorum
-                saepe reiciendis tenetur molestiae nostrum, officia architecto,
-                at, harum id consequuntur porro!
-            </p>
-        </div>
-        <div>
-            <p>Kliknij po więcej szczegółów</p>
-        </div>
-    </div>
-        <div class="flex flex-col gap-7 bg-white py-15 px-10">
-        <div>💻</div>
-        <div>
-            <h4 class="text-xl font-semibold">Tworzenie stron internetowych</h4>
-        </div>
-        <div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                modi rerum exercitationem dolor tempora illum quis cum dolorum
-                saepe reiciendis tenetur molestiae nostrum, officia architecto,
-                at, harum id consequuntur porro!
-            </p>
-        </div>
-        <div>
-            <p>Kliknij po więcej szczegółów</p>
-        </div>
-    </div>
+    {
+        SERVICES.map((service) => {
+            const Icon = service.icon;
+
+            return (
+                <div class="text-primary flex flex-col gap-7 bg-white py-15 px-10">
+                    <div>
+                        <Icon class="w-11 h-11 md:w-15 md:h-15" />
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold">{service.title}</h4>
+                    </div>
+                    <div class="text-primary-lighter">
+                        <p>{service.description}</p>
+                    </div>
+                    <div>
+                        <p>Kliknij po więcej szczegółów</p>
+                    </div>
+                </div>
+            );
+        })
+    }
 </div>
