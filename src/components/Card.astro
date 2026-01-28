@@ -10,20 +10,37 @@ import { SERVICES } from "../content/services";
             const Icon = service.icon;
 
             return (
-                <div class="text-primary flex flex-col gap-7 bg-white py-15 px-10">
-                    <div>
-                        <Icon class="w-11 h-11 md:w-15 md:h-15" />
+                <a
+                    href={service.href}
+                    class="block "
+                >
+                    <div class="group relative overflow-hidden text-primary flex flex-col gap-7 bg-white py-15 px-10 transition-all duration-300 hover:text-secondary group-active:text-seconda">
+                        <div
+                            class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-active:opacity-100"
+                            style={`background-image: url('${service.bgImage.src}');`}
+                        />
+
+                        <div class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-active:opacity-100" />
+
+                        <div class="relative z-10 flex flex-col gap-7">
+                            <div>
+                                <Icon class="w-11 h-11 md:w-15 md:h-15 transition-colors duration-300" />
+                            </div>
+
+                            <h4 class="text-xl font-semibold">
+                                {service.title}
+                            </h4>
+
+                            <div class="text-primary-lighter group-hover:text-secondary group-active:text-secondary">
+                                <p>{service.description}</p>
+                            </div>
+
+                            <p class="text-sm text-primary-lighter group-hover:text-secondary group-active:text-secondary">
+                                Kliknij po więcej szczegółów
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="text-xl font-semibold">{service.title}</h4>
-                    </div>
-                    <div class="text-primary-lighter">
-                        <p>{service.description}</p>
-                    </div>
-                    <div>
-                        <p>Kliknij po więcej szczegółów</p>
-                    </div>
-                </div>
+                </a>
             );
         })
     }
