@@ -3,18 +3,15 @@ import { SERVICES } from "../content/services";
 ---
 
 <div
-    class="py-15 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10 lg:px-15 items-center justify-center"
+    class="py-15 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10 lg:px-15 justify-center"
 >
     {
         SERVICES.map((service) => {
             const Icon = service.icon;
 
             return (
-                <a
-                    href={service.href}
-                    class="block "
-                >
-                    <div class="group relative overflow-hidden text-primary flex flex-col gap-7 bg-white py-15 px-10 transition-all duration-300 hover:text-secondary group-active:text-seconda">
+                <a href={service.href} class="block">
+                    <div class="group relative overflow-hidden text-primary flex flex-col gap-7 bg-white py-15 px-10 transition-all duration-300 hover:text-secondary group-active:text-seconda  h-full">
                         <div
                             class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-active:opacity-100"
                             style={`background-image: url('${service.bgImage.src}');`}
