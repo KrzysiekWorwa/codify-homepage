@@ -10,15 +10,14 @@ import ContentDescription from "./ContentDescription.astro";
 
 <section id={ABOUT.id} class="bg-dark scroll-mt-15 md:scroll-mt-22.5">
     <div
+        data-aos="fade-up"
         class="max-w-360 items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-0"
     >
-        <div data-aos="fade-up">
-            <ContentHeader text={ABOUT.header} class="text-secondary" />
-        </div>
+        <ContentHeader text={ABOUT.header} class="text-secondary" />
         <div
             class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 lg:px-15 items-center justify-center m-auto md:py-10"
         >
-            <div data-aos="fade-up">
+            <div>
                 <ContentSubHeader
                     text={ABOUT.subHeader}
                     class="bg-linear-to-r from-gray-400 from-0% via-secondary via-50% to-gray-400 to-100% bg-clip-text text-transparent"
@@ -30,7 +29,7 @@ import ContentDescription from "./ContentDescription.astro";
                 />
                 {
                     (
-                        <div class="py-7 text-center">
+                        <div class="pt-11 pb-7 md:py-11 text-center">
                             <Button
                                 text={ABOUT.button.label}
                                 href={ABOUT.button.href}
@@ -41,10 +40,7 @@ import ContentDescription from "./ContentDescription.astro";
                 }
             </div>
 
-            <div
-                data-aos="fade-up"
-                class="w-full h-full overflow-hidden rounded-lg"
-            >
+            <div class="w-full h-full overflow-hidden rounded-lg">
                 <Picture
                     src={image}
                     alt="about"
