@@ -5,49 +5,54 @@ import { Picture } from "astro:assets";
 import Button from "./Button.astro";
 import image from "../assets/images/about.jpg";
 import { ABOUT } from "../content/about";
+import ContentDescription from "./ContentDescription.astro";
 ---
 
-<section id={ABOUT.id} class="scroll-mt-15 md:scroll-mt-22.5">
+<section id={ABOUT.id} class="bg-dark scroll-mt-15 md:scroll-mt-22.5">
     <div
-        class="max-w-360 items-center justify-center m-auto my-5 md:my-15 px-5 lg:px-0"
+        class="max-w-360 items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-0"
     >
         <div data-aos="fade-up">
-            <ContentHeader text={ABOUT.header} />
+            <ContentHeader text={ABOUT.header} class="text-secondary" />
         </div>
         <div
-            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 lg:px-15 items-center justify-center"
+            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 lg:px-15 items-center justify-center m-auto md:my-5"
         >
             <div data-aos="fade-up">
-                <ContentSubHeader text={ABOUT.subHeader} />
+                <ContentSubHeader
+                    text={ABOUT.subHeader}
+                    class="text-secondary"
+                />
 
-                <div
-                    class="max-w-none text-justify leading-tight my-2 text-xl text-primary md:text-2xl"
-                >
-                    {ABOUT.description}
-                </div>
-
+                <ContentDescription
+                    text={ABOUT.description}
+                    class="text-secondary"
+                />
                 {
                     (
                         <div class="py-7 text-center">
                             <Button
                                 text={ABOUT.button.label}
                                 href={ABOUT.button.href}
+                                variant="outlined"
                             />
                         </div>
                     )
                 }
             </div>
 
-            <div data-aos="fade-up">
+            <div
+                data-aos="fade-up"
+                class=" w-full h-full overflow-hidden rounded-lg"
+            >
                 <Picture
                     src={image}
                     alt="about"
-                    width={720}
-                    height={480}
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    width={1920}
+                    height={1080}
                     loading="lazy"
                     decoding="async"
-                    class="object-cover justify-self-center w-full lg:h-auto"
+                    class="w-full h-full object-cover"
                 />
             </div>
         </div>
