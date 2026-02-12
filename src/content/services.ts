@@ -1,9 +1,9 @@
 import WebIcon from "../assets/icons/web-design.svg";
 import VirtualIcon from "../assets/icons/360.svg";
 import GraphicIcon from "../assets/icons/graphic-icon.svg";
-import WebImage from "../assets/images/background/web-background.jpg";
-import VirtualImage from "../assets/images/background/360-background.jpg";
-import GraphicImage from "../assets/images/background/3d-background.jpg";
+import WebImage from "../assets/images/background/web-background.webp";
+import VirtualImage from "../assets/images/background/360-background.webp";
+import GraphicImage from "../assets/images/background/3d-background.webp";
 
 export const SERVICES = [
     {
