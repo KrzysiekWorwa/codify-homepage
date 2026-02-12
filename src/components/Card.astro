@@ -7,7 +7,7 @@ import { SERVICES } from "../content/services";
     class="pt-5 md:pt-15 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10 lg:px-15 justify-center"
 >
     {
-        SERVICES.map((service) => {
+        SERVICES.items.map((service) => {
             const Icon = service.icon;
 
             return (
@@ -37,7 +37,7 @@ import { SERVICES } from "../content/services";
                             </div>
 
                             <p class="text-sm text-primary-lighter group-hover:text-secondary group-active:text-secondary">
-                                Kliknij po więcej szczegółów
+                                {SERVICES.cta}
                             </p>
                         </div>
                     </div>

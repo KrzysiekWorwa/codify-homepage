@@ -1,23 +1,23 @@
 ---
-import Button from "./Button.astro";
 import Card from "./Card.astro";
 import ContentDescription from "./ContentDescription.astro";
 import ContentHeader from "./ContentHeader.astro";
 import ContentSubHeader from "./ContentSubHeader.astro";
+import { SERVICES } from "../content/services";
 ---
 
-<section id="services" class="scroll-mt-15 md:scroll-mt-22.5">
+<section id={SERVICES.id} class="scroll-mt-15 md:scroll-mt-22.5">
     <div
         data-aos="fade-up"
         class="max-w-360 flex flex-col items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-0"
     >
-        <ContentHeader text="Usługi" class="text-primary" />
+        <ContentHeader text={SERVICES.header} class="text-primary" />
         <ContentSubHeader
-            text="Pokaż się z zupełnie nowej perspektywy"
+            text={SERVICES.subHeader}
             class="bg-linear-to-r from-dark from-0% via-gray-500 via-50% to-dark to-100% bg-clip-text text-transparent"
         />
         <ContentDescription
-            text="Tworzymy rozwiązania, które łączą nowoczesną formę z unikalnym stylem, przyciągają uwagę klientów i nadają Twojej ofercie wyjątkowy charakter"
+            text={SERVICES.description}
             class="text-center text-primary"
         />
         <Card />
