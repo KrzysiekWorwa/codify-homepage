@@ -3,7 +3,7 @@ import ContentSubHeader from "./ContentSubHeader.astro";
 import ContentHeader from "./ContentHeader.astro";
 import { Picture } from "astro:assets";
 import Button from "./Button.astro";
-import image from "../assets/images/about.jpg";
+import image from "../assets/images/about.webp";
 import { ABOUT } from "../content/about";
 import ContentDescription from "./ContentDescription.astro";
 ---
@@ -21,7 +21,7 @@ import ContentDescription from "./ContentDescription.astro";
             <div data-aos="fade-up">
                 <ContentSubHeader
                     text={ABOUT.subHeader}
-                    class="bg-linear-to-r from-secondary from-0% via-gray-400 via-50% to-secondary to-100% bg-clip-text text-transparent"
+                    class="bg-linear-to-r from-gray-400 from-0% via-secondary via-50% to-gray-400 to-100% bg-clip-text text-transparent"
                 />
 
                 <ContentDescription
@@ -43,7 +43,7 @@ import ContentDescription from "./ContentDescription.astro";
 
             <div
                 data-aos="fade-up"
-                class=" w-full h-full overflow-hidden rounded-lg"
+                class="w-full h-full overflow-hidden rounded-lg"
             >
                 <Picture
                     src={image}
