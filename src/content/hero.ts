@@ -7,8 +7,8 @@ export const HERO = {
     "Wizualizacje 3D",
   ],
   button: {
-    href: "#about",
-    label: "O nas",
+    href: "#contact",
+    label: "Wycena",
   },
   buttonOffer: {
     href: "#services",

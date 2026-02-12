@@ -16,7 +16,7 @@ import Button from "./Button.astro";
                 {HERO.h1}
             </h1>
             <h2
-                class="text-[clamp(1.25rem,3vw,3rem)] bg-linear-to-b from-secondary to-primary bg-clip-text text-transparent"
+                class="text-[clamp(1.25rem,3vw,3rem)] bg-linear-to-b from-secondary to-primary bg-clip-text text-transparent my-2"
             >
                 <Typewriter messages={HERO.h2} class="tw" />
             </h2>
@@ -29,6 +29,7 @@ import Button from "./Button.astro";
             <Button
                 href={HERO.buttonOffer.href}
                 text={HERO.buttonOffer.label}
+                variant="outlined"
             />
         </div>
     </div>
