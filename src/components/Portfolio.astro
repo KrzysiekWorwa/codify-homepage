@@ -1,0 +1,23 @@
+---
+import ContentDescription from "./ContentDescription.astro";
+import ContentHeader from "./ContentHeader.astro";
+import ContentSubHeader from "./ContentSubHeader.astro";
+import { PORTFOLIO } from "../content/portfolio";
+---
+
+<section id={PORTFOLIO.id} class="bg-dark scroll-mt-15 md:scroll-mt-22.5">
+    <div
+        data-aos="fade-up"
+        class="max-w-360 flex flex-col items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-1"
+    >
+        <ContentHeader text={PORTFOLIO.header} class="text-secondary" />
+        <ContentSubHeader
+            text={PORTFOLIO.subHeader}
+            class="bg-linear-to-r from-gray-400 from-0% via-secondary via-50% to-gray-400 to-100% bg-clip-text text-transparent"
+        />
+        <ContentDescription
+            text={PORTFOLIO.description}
+            class="text-center text-secondary"
+        />
+    </div>
+</section>
