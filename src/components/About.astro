@@ -16,17 +16,17 @@ import ContentDescription from "./ContentDescription.astro";
             <ContentHeader text={ABOUT.header} class="text-secondary" />
         </div>
         <div
-            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 lg:px-15 items-center justify-center m-auto md:my-5"
+            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 lg:px-15 items-center justify-center m-auto md:py-10"
         >
             <div data-aos="fade-up">
                 <ContentSubHeader
                     text={ABOUT.subHeader}
-                    class="text-secondary"
+                    class="bg-linear-to-r from-secondary from-0% via-gray-400 via-50% to-secondary to-100% bg-clip-text text-transparent"
                 />
 
                 <ContentDescription
                     text={ABOUT.description}
-                    class="text-secondary"
+                    class="text-secondary text-justify"
                 />
                 {
                     (

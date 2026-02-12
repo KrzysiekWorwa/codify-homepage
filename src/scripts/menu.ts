@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const openMenu = () => {
         burger.setAttribute("aria-expanded", "true");
         burger.classList.add("open");
-        mobileMenu.classList.remove("hidden");
-        mobileMenu.classList.add("flex");
+        mobileMenu.classList.remove("max-h-0");
+        mobileMenu.classList.add("max-h-[400px]", "py-5");
     };
 
     const closeMenu = () => {
         burger.setAttribute("aria-expanded", "false");
         burger.classList.remove("open");
-        mobileMenu.classList.add("hidden");
-        mobileMenu.classList.remove("flex");
+        mobileMenu.classList.remove("max-h-[400px]", "py-5");
+        mobileMenu.classList.add("max-h-0");
     };
 
     const toggleMenu = () => {
