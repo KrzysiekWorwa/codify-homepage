@@ -8,7 +8,7 @@ import Button from "./Button.astro";
 <section id={CTA.id} class="scroll-mt-15 md:scroll-mt-22.5">
     <div
         data-aos="fade-up"
-        class="max-w-360 flex flex-col items-center justify-center m-auto py-5 md:pb-30 md:pt-25 px-5 lg:px-1"
+        class="max-w-360 flex flex-col items-center justify-center m-auto py-5 md:py-30 px-5 lg:px-1"
     >
         <ContentSubHeader
             text={CTA.header}
@@ -18,7 +18,7 @@ import Button from "./Button.astro";
             text={CTA.description}
             class="text-center text-primary"
         />
-        <div class="pt-10 text-center">
+        <div class="md:pt-10 py-5 text-center">
             <Button href={CTA.button.href} text={CTA.button.label} />
         </div>
     </div>

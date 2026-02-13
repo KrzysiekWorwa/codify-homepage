@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
 import swiperUrl from "../scripts/swiper.ts?url";
+import SliderButton from "./SliderButton.astro";
 
 const items = [
     {
@@ -54,31 +55,17 @@ const items = [
 ];
 ---
 
-<div class="bg-dark text-secondary">
-    <div class="relative px-5 md:px-10">
-        <button
-            class="portfolio-prev hidden md:flex items-center justify-center absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-white/20 bg-black/30 backdrop-blur-md hover:bg-black/50 transition"
-            aria-label="Previous"
-            type="button"
-        >
-            ←
-        </button>
-
-        <button
-            class="portfolio-next hidden md:flex items-center justify-center absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-white/20 bg-black/30 backdrop-blur-md hover:bg-black/50 transition"
-            aria-label="Next"
-            type="button"
-        >
-            →
-        </button>
-
-        <div class="swiper portfolio-swiper">
-            <div class="swiper-wrapper">
-                {
-                    items.map((p) => (
-                        <div class="swiper-slide">
+<div class="relative text-secondary">
+    <SliderButton direction="prev" icon="←" ariaLabel="Previous" />
+    <SliderButton direction="next" icon="→" ariaLabel="Next" />
+    <div class="swiper portfolio-swiper">
+        <div class="swiper-wrapper">
+            {
+                items.map((p) => (
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
                             <article class="w-full">
-                                <div class="overflow-hidden rounded-md bg-black/20 border border-white/10">
+                                <div class="overflow-hidden rounded-lg">
                                     <Picture
                                         src={p.image}
                                         alt={p.title}
@@ -86,7 +73,7 @@ const items = [
                                         height={1080}
                                         loading="lazy"
                                         decoding="async"
-                                        class="block w-full aspect-21/9 object-cover"
+                                        class="block w-full aspect-video object-cover"
                                     />
                                 </div>
 
@@ -103,9 +90,9 @@ const items = [
                                 </div>
                             </article>
                         </div>
-                    ))
-                }
-            </div>
+                    </div>
+                ))
+            }
         </div>
     </div>
 </div>
@@ -115,21 +102,30 @@ const items = [
         overflow: visible;
     }
     .portfolio-swiper .swiper-slide {
-        width: clamp(520px, 72vw, 980px);
-        transition:
-            transform 320ms ease,
-            opacity 320ms ease;
-        transform: scale(0.86);
+        width: clamp(600px, 80vw, 1100px);
         opacity: 0.55;
+        transition: opacity 320ms ease;
     }
+    .portfolio-swiper .swiper-slide .slide-inner {
+        transition: transform 320ms ease;
+        transform: scale(0.86);
+        transform-origin: center;
+    }
+
     .portfolio-swiper .swiper-slide-active {
-        transform: scale(1);
         opacity: 1;
     }
+    .portfolio-swiper .swiper-slide-active .slide-inner {
+        transform: scale(1);
+    }
+
     .portfolio-swiper .swiper-slide-prev,
     .portfolio-swiper .swiper-slide-next {
-        transform: scale(0.92);
         opacity: 0.85;
+    }
+    .portfolio-swiper .swiper-slide-prev .slide-inner,
+    .portfolio-swiper .swiper-slide-next .slide-inner {
+        transform: scale(0.92);
     }
     @media (max-width: 640px) {
         .portfolio-swiper .swiper-slide {

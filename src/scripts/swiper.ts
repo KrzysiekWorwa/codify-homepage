@@ -15,10 +15,15 @@ export function initPortfolioSwiper() {
     loop: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    spaceBetween: 64,
     speed: 650,
-    grabCursor: true,
     slideToClickedSlide: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    keyboard: { enabled: true, onlyInViewport: true },
+    a11y: { enabled: true },
     navigation: {
       nextEl: ".portfolio-next",
       prevEl: ".portfolio-prev",
