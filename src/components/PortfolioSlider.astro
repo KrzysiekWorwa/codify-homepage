@@ -1,6 +1,5 @@
 ---
 import { Picture } from "astro:assets";
-import swiperUrl from "../scripts/swiper.ts?url";
 import SliderButton from "./SliderButton.astro";
 
 const items = [
@@ -133,4 +132,6 @@ const items = [
     }
 </style>
 
-<script type="module" src={swiperUrl}></script>
+<script>
+    import "../scripts/swiper.ts";
+</script>

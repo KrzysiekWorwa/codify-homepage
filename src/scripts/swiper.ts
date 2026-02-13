@@ -5,7 +5,7 @@ type SwiperElement = HTMLElement & {
   swiper?: Swiper;
 };
 
-export function initPortfolioSwiper() {
+function initPortfolioSwiper() {
   const el = document.querySelector(".portfolio-swiper") as SwiperElement | null;
   if (!el) return;
 
@@ -31,14 +31,10 @@ export function initPortfolioSwiper() {
   });
 }
 
-function run() {
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPortfolioSwiper, { once: true });
+} else {
   initPortfolioSwiper();
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", run, { once: true });
-} else {
-  run();
-}
-
-document.addEventListener("astro:page-load", run);
+document.addEventListener("astro:page-load", initPortfolioSwiper);
