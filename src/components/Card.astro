@@ -4,7 +4,7 @@ import { SERVICES } from "../content/services";
 
 <div
     data-aos="fade-up"
-    class="pt-5 md:pt-15 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10 lg:px-15 justify-center"
+    class="pt-5 md:pt-15 grid grid-cols-1 gap-7 lg:grid-cols-3 lg:gap-10 lg:px-15 justify-center"
 >
     {
         SERVICES.items.map((service) => {
@@ -14,7 +14,7 @@ import { SERVICES } from "../content/services";
                 <a href={service.href} class="block">
                     <div
                         class="group relative overflow-hidden text-primary flex flex-col gap-7 bg-white py-15 px-10 transition-all duration-300 hover:text-secondary group-active:text-seconda  hover:scale-[1.03]
-            active:scale-[0.98] h-full"
+            active:scale-[0.98] h-full shadow-lg rounded-lg"
                     >
                         <div
                             class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-active:opacity-100"

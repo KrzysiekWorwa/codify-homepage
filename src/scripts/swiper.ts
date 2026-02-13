@@ -1,13 +1,14 @@
-// src/scripts/swiper.ts
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
+type SwiperElement = HTMLElement & {
+  swiper?: Swiper;
+};
+
 export function initPortfolioSwiper() {
-  const el = document.querySelector(".portfolio-swiper") as HTMLElement | null;
+  const el = document.querySelector(".portfolio-swiper") as SwiperElement | null;
   if (!el) return;
 
-  // nie inicjuj 2x (Astro view transitions / hot reload)
-  // @ts-ignore
   if (el.swiper) return;
 
   new Swiper(el, {
