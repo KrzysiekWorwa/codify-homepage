@@ -1,0 +1,141 @@
+---
+import { Picture } from "astro:assets";
+import swiperUrl from "../scripts/swiper.ts?url";
+
+const items = [
+    {
+        category: "WWW / Landing Page",
+        title: "Innovation and Crafts.",
+        description: "Nowoczesny layout + animacje + CTA pod konwersję.",
+        image: (await import("../assets/images/portfolio.webp")).default,
+    },
+    {
+        category: "Wirtualny spacer 360°",
+        title: "Immersive Tour Experience.",
+        description: "Prezentacja obiektu w 360° z nawigacją i hotspotami.",
+        image: (await import("../assets/images/portfolio.webp")).default,
+    },
+    {
+        category: "Wizualizacja 3D",
+        title: "Concept Visualization.",
+        description: "Realistyczne rendery do marketingu i przedsprzedaży.",
+        image: (await import("../assets/images/portfolio.webp")).default,
+    },
+    {
+        category: "WWW / Strona firmowa",
+        title: "Modern Web Presence.",
+        description: "Szybka strona, SEO i świetny UX na mobile.",
+        image: (await import("../assets/images/portfolio.webp")).default,
+    },
+    {
+        category: "WWW / Landing Page",
+        title: "Innovation and Crafts.",
+        description: "Nowoczesny layout + animacje + CTA pod konwersję.",
+        image: (await import("../assets/images/portfolio.webp")).default,
+    },
+    {
+        category: "Wirtualny spacer 360°",
+        title: "Immersive Tour Experience.",
+        description: "Prezentacja obiektu w 360° z nawigacją i hotspotami.",
+        image: (await import("../assets/images/portfolio.webp")).default,
+    },
+    {
+        category: "Wizualizacja 3D",
+        title: "Concept Visualization.",
+        description: "Realistyczne rendery do marketingu i przedsprzedaży.",
+        image: (await import("../assets/images/portfolio.webp")).default,
+    },
+    {
+        category: "WWW / Strona firmowa",
+        title: "Modern Web Presence.",
+        description: "Szybka strona, SEO i świetny UX na mobile.",
+        image: (await import("../assets/images/portfolio.webp")).default,
+    },
+];
+---
+
+<div class="bg-dark text-secondary">
+    <div class="relative px-5 md:px-10">
+        <button
+            class="portfolio-prev hidden md:flex items-center justify-center absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-white/20 bg-black/30 backdrop-blur-md hover:bg-black/50 transition"
+            aria-label="Previous"
+            type="button"
+        >
+            ←
+        </button>
+
+        <button
+            class="portfolio-next hidden md:flex items-center justify-center absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-white/20 bg-black/30 backdrop-blur-md hover:bg-black/50 transition"
+            aria-label="Next"
+            type="button"
+        >
+            →
+        </button>
+
+        <div class="swiper portfolio-swiper">
+            <div class="swiper-wrapper">
+                {
+                    items.map((p) => (
+                        <div class="swiper-slide">
+                            <article class="w-full">
+                                <div class="overflow-hidden rounded-md bg-black/20 border border-white/10">
+                                    <Picture
+                                        src={p.image}
+                                        alt={p.title}
+                                        width={1920}
+                                        height={1080}
+                                        loading="lazy"
+                                        decoding="async"
+                                        class="block w-full aspect-[21/9] object-cover"
+                                    />
+                                </div>
+
+                                <div class="pt-5 text-center">
+                                    <p class="text-xs tracking-[0.25em] text-white/50 uppercase">
+                                        {p.category}
+                                    </p>
+                                    <h4 class="mt-2 text-xl md:text-2xl font-semibold">
+                                        {p.title}
+                                    </h4>
+                                    <p class="mt-2 text-sm md:text-base text-white/70 max-w-[52ch] mx-auto">
+                                        {p.description}
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style is:global>
+    .portfolio-swiper {
+        overflow: visible;
+    }
+    .portfolio-swiper .swiper-slide {
+        width: clamp(520px, 72vw, 980px);
+        transition:
+            transform 320ms ease,
+            opacity 320ms ease;
+        transform: scale(0.86);
+        opacity: 0.55;
+    }
+    .portfolio-swiper .swiper-slide-active {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .portfolio-swiper .swiper-slide-prev,
+    .portfolio-swiper .swiper-slide-next {
+        transform: scale(0.92);
+        opacity: 0.85;
+    }
+    @media (max-width: 640px) {
+        .portfolio-swiper .swiper-slide {
+            width: clamp(280px, 86vw, 520px);
+        }
+    }
+</style>
+
+<script type="module" src={swiperUrl}></script>
