@@ -1,0 +1,32 @@
+<form action="https://formspree.io/f/mwvnbpwl" method="POST" class="space-y-4">
+    <label class="text-primary">Nazwa firmy / Imię</label>
+    <input
+        type="text"
+        name="Nazwa firmy / Imię"
+        placeholder="np. Krzysiek"
+        required
+        class="w-full p-3 rounded-lg border-2 border-dark/20 focus:outline-accent"
+    />
+    <label class="text-primary">Email</label>
+    <input
+        type="email"
+        name="email"
+        placeholder="Twój email"
+        required
+        class="w-full p-3 rounded-lg border-2 border-dark/20 focus:outline-accent"
+    />
+    <label class="text-primary">Wiadomość</label>
+    <textarea
+    rows="6"
+        name="Wiadomość"
+        placeholder="Opowiedz nam o swoim projekcie"
+        required
+        class="w-full p-3 rounded-lg border-2 border-dark/20 focus:outline-accent"></textarea>
+
+    <button
+        type="submit"
+        class="px-5 py-2.5 text-lg md:text-xl rounded-lg text-center cursor-pointer self-start transition-colors duration-500 ease border-2 inline-block bg-accent border-accent text-secondary hover:bg-accent-hover hover:border-accent-hover"
+    >
+        Wyślij
+    </button>
+</form>

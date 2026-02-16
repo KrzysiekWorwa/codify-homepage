@@ -3,6 +3,7 @@ import ContentSubHeader from "./ContentSubHeader.astro";
 import ContentHeader from "./ContentHeader.astro";
 import { CONTACT } from "../content/contact";
 import ContentDescription from "./ContentDescription.astro";
+import Form from "./Form.astro";
 ---
 
 <section id={CONTACT.id} class="bg-secondary scroll-mt-15 md:scroll-mt-22.5">
@@ -27,9 +28,14 @@ import ContentDescription from "./ContentDescription.astro";
                     text={CONTACT.description}
                     class="text-primary text-justify"
                 />
+                <div class="my-5">
+                    <Form />
+                </div>
             </div>
 
-            <div class="flex flex-row flex-wrap gap-2 md:gap-4 justify-center items-center">
+            <div
+                class="flex flex-row flex-wrap gap-2 md:gap-4 justify-center items-center"
+            >
                 {
                     CONTACT.contactData.map((i) => {
                         const Icon = i.icon;
@@ -44,7 +50,7 @@ import ContentDescription from "./ContentDescription.astro";
                                 href={href}
                                 class="flex-1 flex flex-col  gap-2 p-2 md:p-6 border-2 border-transparent rounded-lg hover:border-2 hover:border-dark/20 transition-all duration-300 group"
                             >
-                                <Icon class="w-8 h-8" /> 
+                                <Icon class="w-8 h-8" />
                                 <h4 class="text-xl md:text-3xl font-semibold">
                                     {i.head}
                                 </h4>
