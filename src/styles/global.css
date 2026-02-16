@@ -16,6 +16,30 @@
   --color-dark: #0D0D0D;
 }
 
+@utility gradient-dark {
+  background: linear-gradient(
+    to right,
+    var(--color-dark) 0%,
+    #6b7280 50%,
+    var(--color-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gradient-light {
+  background: linear-gradient(
+    to right,
+    #9ca3af 0%,
+    var(--color-secondary) 50%,
+    #9ca3af 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 html {
   @apply scroll-smooth;
 }
