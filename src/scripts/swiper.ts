@@ -15,7 +15,7 @@ function initPortfolioSwiper() {
     loop: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    speed: 650,
+    speed: 850,
     slideToClickedSlide: true,
     autoplay: {
       delay: 3500,

@@ -1,31 +1,33 @@
 ---
 import { Picture } from "astro:assets";
 import SliderButton from "./SliderButton.astro";
+import RightArrow from "../assets/icons/arrow-right.svg";
+import LeftArrow from "../assets/icons/arrow-left.svg";
 
 const items = [
     {
         category: "WWW / Landing Page",
         title: "Innovation and Crafts.",
         description: "Nowoczesny layout + animacje + CTA pod konwersję.",
-        image: (await import("../assets/images/portfolio.webp")).default,
+        image: (await import("../assets/images/portfolio/1.webp")).default,
     },
     {
         category: "Wirtualny spacer 360°",
         title: "Immersive Tour Experience.",
         description: "Prezentacja obiektu w 360° z nawigacją i hotspotami.",
-        image: (await import("../assets/images/portfolio.webp")).default,
+        image: (await import("../assets/images/portfolio/2.webp")).default,
     },
     {
         category: "Wizualizacja 3D",
         title: "Concept Visualization.",
         description: "Realistyczne rendery do marketingu i przedsprzedaży.",
-        image: (await import("../assets/images/portfolio.webp")).default,
+        image: (await import("../assets/images/portfolio/3.webp")).default,
     },
     {
         category: "WWW / Strona firmowa",
         title: "Modern Web Presence.",
         description: "Szybka strona, SEO i świetny UX na mobile.",
-        image: (await import("../assets/images/portfolio.webp")).default,
+        image: (await import("../assets/images/portfolio/4.webp")).default,
     },
     {
         category: "WWW / Landing Page",
@@ -55,8 +57,12 @@ const items = [
 ---
 
 <div class="relative text-secondary">
-    <SliderButton direction="prev" icon="←" ariaLabel="Previous" />
-    <SliderButton direction="next" icon="→" ariaLabel="Next" />
+    <SliderButton direction="prev" ariaLabel="Previous"
+        ><LeftArrow class="w-5 h-5 md:w-7 md:h-7" /></SliderButton
+    >
+    <SliderButton direction="next" ariaLabel="Next"
+        ><RightArrow class="w-5 h-5 md:w-7 md:h-7" /></SliderButton
+    >
     <div class="swiper portfolio-swiper">
         <div class="swiper-wrapper">
             {
@@ -64,7 +70,7 @@ const items = [
                     <div class="swiper-slide">
                         <div class="slide-inner">
                             <article class="w-full">
-                                <div class="overflow-hidden rounded-lg">
+                                <div class="relative overflow-hidden rounded-lg group">
                                     <Picture
                                         src={p.image}
                                         alt={p.title}
@@ -74,6 +80,15 @@ const items = [
                                         decoding="async"
                                         class="block w-full aspect-video object-cover"
                                     />
+                                    <a
+                                        href={p.href}
+                                        class="absolute inset-0 z-10 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/50 group-hover:opacity-100 cursor-pointer"
+                                        aria-label={`Otwórz: ${p.title}`}
+                                    >
+                                        <span class="inline-flex px-6 py-3 rounded-lg border border-secondary/40 text-secondary uppercase tracking-widest text-xs bg-dark/20 translate-y-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                                            Odwiedź stronę
+                                        </span>
+                                    </a>
                                 </div>
 
                                 <div class="pt-5 text-center">
