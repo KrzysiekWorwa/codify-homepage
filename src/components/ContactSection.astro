@@ -1,0 +1,60 @@
+---
+import ContentSubHeader from "./ContentSubHeader.astro";
+import ContentHeader from "./ContentHeader.astro";
+import { CONTACT } from "../content/contact";
+import ContentDescription from "./ContentDescription.astro";
+---
+
+<section id={CONTACT.id} class="bg-secondary scroll-mt-15 md:scroll-mt-22.5">
+    <div
+        data-aos="fade-up"
+        class="max-w-360 items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-1"
+    >
+        <div
+            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 items-center justify-center m-auto"
+        >
+            <div>
+                <ContentHeader
+                    text={CONTACT.header}
+                    class="text-primary text-left"
+                />
+                <ContentSubHeader
+                    text={CONTACT.subHeader}
+                    class="gradient-dark text-left mx-0"
+                />
+
+                <ContentDescription
+                    text={CONTACT.description}
+                    class="text-primary text-justify"
+                />
+            </div>
+
+            <div class="flex flex-row flex-wrap gap-2 md:gap-4 justify-center items-center">
+                {
+                    CONTACT.contactData.map((i) => {
+                        const Icon = i.icon;
+
+                        const href =
+                            i.type === "email"
+                                ? `mailto:${i.contact}`
+                                : `tel:${i.contact.replace(/\s+/g, "")}`;
+
+                        return (
+                            <a
+                                href={href}
+                                class="flex-1 flex flex-col  gap-2 p-2 md:p-6 border-2 border-transparent rounded-lg hover:border-2 hover:border-dark/20 transition-all duration-300 group"
+                            >
+                                <Icon class="w-8 h-8" /> 
+                                <h4 class="text-xl md:text-3xl font-semibold">
+                                    {i.head}
+                                </h4>
+                                <p>{i.text}</p>
+                                <p>{i.contact}</p>
+                            </a>
+                        );
+                    })
+                }
+            </div>
+        </div>
+    </div>
+</section>
