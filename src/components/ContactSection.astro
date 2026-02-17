@@ -6,7 +6,7 @@ import ContentDescription from "./ContentDescription.astro";
 import Form from "./Form.astro";
 ---
 
-<section id={CONTACT.id} class="bg-secondary scroll-mt-15 md:scroll-mt-22.5">
+<section id={CONTACT.id} class="bg-dark scroll-mt-15 md:scroll-mt-22.5">
     <div
         data-aos="fade-up"
         class="max-w-360 items-center justify-center m-auto pt-10 pb-0 md:py-30 px-5 lg:px-1"
@@ -17,16 +17,16 @@ import Form from "./Form.astro";
             <div>
                 <ContentHeader
                     text={CONTACT.header}
-                    class="text-primary text-left"
+                    class="text-secondary text-left"
                 />
                 <ContentSubHeader
                     text={CONTACT.subHeader}
-                    class="gradient-dark text-left mx-0"
+                    class="gradient-light text-left mx-0"
                 />
 
                 <ContentDescription
                     text={CONTACT.description}
-                    class="text-primary text-justify"
+                    class="text-secondary text-justify"
                 />
                 <div class="mt-5">
                     <Form />
@@ -34,7 +34,7 @@ import Form from "./Form.astro";
             </div>
 
             <div
-                class="flex flex-row flex-wrap gap-2 md:gap-4 justify-center items-center"
+                class="flex flex-row flex-wrap gap-2 md:gap-4 justify-center items-center text-secondary"
             >
                 {
                     CONTACT.contactData.map((i) => {
@@ -48,7 +48,7 @@ import Form from "./Form.astro";
                         return (
                             <a
                                 href={href}
-                                class="flex-1 flex flex-col  gap-2 p-2 md:p-6 border-2 border-transparent rounded-lg hover:border-2 hover:border-dark/20 transition-all duration-300 group"
+                                class="flex-1 flex flex-col  gap-2 p-2 md:p-6 border-2 border-transparent rounded-lg hover:border-2 hover:border-secondary/40 transition-all duration-300 group"
                             >
                                 <Icon class="w-8 h-8" />
                                 <h4 class="text-xl md:text-3xl font-semibold">
