@@ -19,7 +19,7 @@
         required
         class="w-full p-3 rounded-lg border-2 border-secondary/40 focus:outline-secondary/50"
     />
-    <label>Wiadomość</label">
+    <label>Wiadomość</label>
     <textarea
         rows="6"
         name="Wiadomość"
@@ -27,7 +27,7 @@
         required
         class="w-full p-3 m-0 rounded-lg border-2 border-secondary/40 focus:outline-secondary/50"
     ></textarea>
-    <p class='mt-2"'>
+    <p class="mt-2">
         Wysyłając formularz, akceptujesz, że przetworzymy Twoje dane w celu
         kontaktu i obsługi zapytania.
     </p>
@@ -39,3 +39,15 @@
         Wyślij
     </button>
 </form>
+<div
+    data-form-message
+    class="mt-4 text-green-600 font-semibold opacity-0 transition-opacity duration-500"
+>
+</div>
+
+<script>
+    import { initContactForms } from "../scripts/form";
+
+    initContactForms();
+    document.addEventListener("astro:page-load", initContactForms);
+</script>
