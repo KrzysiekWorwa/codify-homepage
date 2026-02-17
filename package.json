@@ -16,6 +16,7 @@
     "astro": "^5.16.15",
     "astro-typewriter": "^1.1.0",
     "class-variance-authority": "^0.7.1",
+    "motion": "^12.34.1",
     "swiper": "^12.1.0",
     "tailwindcss": "^4.1.18"
   },

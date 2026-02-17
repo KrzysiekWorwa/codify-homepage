@@ -8,6 +8,7 @@ export const MENU: MenuItem[] = [
   { label: "Usługi", href: "#services" },
   { label: "O nas", href: "#about" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Pytania", href: "#faq" },
 ];
 
 export const CTA: MenuItem = {
