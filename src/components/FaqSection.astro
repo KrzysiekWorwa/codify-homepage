@@ -4,6 +4,7 @@ import ContentSubHeader from "./ContentSubHeader.astro";
 import ContentDescription from "./ContentDescription.astro";
 import { FAQ } from "../content/faq";
 import Close from "../assets/icons/close.svg";
+import Button from "./Button.astro";
 ---
 
 <section id={FAQ.id} class="bg-secondary scroll-mt-15 md:scroll-mt-22.5">
@@ -11,17 +12,14 @@ import Close from "../assets/icons/close.svg";
         class="max-w-360 m-auto py-10 md:py-30 px-5 lg:px-1"
         data-aos="fade-up"
     >
-        <ContentHeader text={FAQ.header} class="text-primary text-left" />
-        <ContentSubHeader
-            text={FAQ.subHeader}
-            class="gradient-dark text-left mx-0"
-        />
+        <ContentHeader text={FAQ.header} class="text-primary" />
+        <ContentSubHeader text={FAQ.subHeader} class="gradient-dark mx-0" />
         <ContentDescription
             text={FAQ.description}
-            class="text-primary-lighter text-left max-w-[70ch]"
+            class="text-primary-lighter text-center mx-auto"
         />
 
-        <div class="mt-10 space-y-3 md:px-15">
+        <div class="my-10 space-y-3 md:px-15">
             {
                 FAQ.items.map((item) => (
                     <details class="faq-item rounded-lg border-2 border-dark/20 bg-white hover:border-dark/50 transition-all duration-500 ">
@@ -43,6 +41,19 @@ import Close from "../assets/icons/close.svg";
                     </details>
                 ))
             }
+        </div>
+        <div class="flex flex-col items-center justify-center mt-10 md:mt-25">
+            <ContentSubHeader
+                text={FAQ.ctaHeader}
+                class="gradient-dark text-center mx-0"
+            />
+            <ContentDescription
+                text={FAQ.ctaDescription}
+                class="text-primary-lighter text-center"
+            />
+            <div class="mt-5">
+                <Button href={FAQ.button.href} text={FAQ.button.label} />
+            </div>
         </div>
     </div>
 </section>
