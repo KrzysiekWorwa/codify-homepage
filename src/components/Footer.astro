@@ -1,12 +1,12 @@
 ---
 import Logo from "../assets/icons/Codify-logo-ciemne.svg";
-import Button from "./Button.astro";
-import BurgerButton from "./BurgerButton.astro";
 import { MENU, CTA } from "../content/menuItems";
 ---
 
 <footer class="bg-dark py-10 md:py-15 flex flex-col">
-    <div class="px-20 pb-10 md:pb-15 flex flex-col md:flex-row items-center justify-between gap-7">
+    <div
+        class="px-20 pb-10 md:pb-15 flex flex-col md:flex-row items-center justify-between gap-7"
+    >
         <a
             href="#home"
             class="flex flex-col gap-1.5 items-center group text-secondary md:text-secondary hover:text-accent transform hover:rotate-44 transition-all duration-500 ease-out"
@@ -46,7 +46,9 @@ import { MENU, CTA } from "../content/menuItems";
         </div>
     </div>
     <div class="h-0.5 bg-secondary/40 mx-5 md:mx-20"></div>
-    <div class="text-secondary flex flex-col md:flex-row gap-3 md:gap-7 items-center justify-center pt-3 md:pt-8">
+    <div
+        class="text-secondary flex flex-col md:flex-row gap-3 md:gap-7 items-center justify-center pt-3 md:pt-8"
+    >
         <p>© 2026 Codify. All rights reserved.</p>
         <a
             class="hover:text-accent transition-colors duration-500 ease cursor-pointer"
