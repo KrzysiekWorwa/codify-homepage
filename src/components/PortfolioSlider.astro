@@ -6,6 +6,16 @@ import LeftArrow from "../assets/icons/arrow-left.svg";
 import type { PortfolioItem } from "../content/portfolio";
 
 const { items } = Astro.props as { items: PortfolioItem[] };
+
+const MIN_LOOP_ITEMS = 6;
+
+const loopItems =
+    items.length >= MIN_LOOP_ITEMS
+        ? items
+        : Array.from(
+              { length: Math.ceil(MIN_LOOP_ITEMS / items.length) },
+              () => items,
+          ).flat();
 ---
 
 <div class="relative text-secondary">
@@ -20,7 +30,7 @@ const { items } = Astro.props as { items: PortfolioItem[] };
     <div class="swiper portfolio-swiper">
         <div class="swiper-wrapper">
             {
-                items.map((p) => (
+                loopItems.map((p) => (
                     <div class="swiper-slide">
                         <div class="slide-inner">
                             <article class="w-full">
