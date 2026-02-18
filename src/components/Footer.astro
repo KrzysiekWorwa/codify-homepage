@@ -1,6 +1,17 @@
 ---
 import Logo from "../assets/icons/Codify-logo-ciemne.svg";
-import { MENU, CTA } from "../content/menuItems";
+import type { NavData } from "../content/menuItems";
+
+const { nav } = Astro.props as { nav: NavData };
+
+const resolveHref = (href: string) => {
+    if (!href) return "#";
+    if (href.startsWith("#")) return href;
+    if (href.startsWith("http")) return href;
+    return `${import.meta.env.BASE_URL}${href}`;
+};
+
+const homeHref = resolveHref(nav.homeHref ?? "#home");
 ---
 
 <footer class="bg-dark pb-10 md:pb-15 flex flex-col">
@@ -9,7 +20,7 @@ import { MENU, CTA } from "../content/menuItems";
         class="px-20 py-10 md:py-15 flex flex-col md:flex-row items-center justify-between gap-7"
     >
         <a
-            href="#home"
+            href={homeHref}
             class="flex flex-col gap-1.5 items-center group text-secondary md:text-secondary hover:text-accent transform hover:rotate-44 transition-all duration-500 ease-out"
             aria-label="Go to home"
         >
@@ -26,7 +37,7 @@ import { MENU, CTA } from "../content/menuItems";
 
         <div class="flex flex-col md:flex-row gap-3 md:gap-7 items-center">
             {
-                MENU.map((item) => (
+                nav.menu.map((item) => (
                     <a
                         href={item.href}
                         class="text-secondary text-xl font-medium hover:text-accent transition-colors duration-500 ease"
@@ -35,11 +46,16 @@ import { MENU, CTA } from "../content/menuItems";
                     </a>
                 ))
             }
-            <a
-                href={CTA.href}
-                class="text-secondary text-xl font-medium hover:text-accent transition-colors duration-500 ease"
-                >{CTA.label}</a
-            >
+            {
+                nav.cta && (
+                    <a
+                        href={nav.cta.href}
+                        class="text-secondary text-xl font-medium hover:text-accent transition-colors duration-500 ease"
+                    >
+                        {nav.cta.label}
+                    </a>
+                )
+            }
         </div>
 
         <div class="text-secondary">

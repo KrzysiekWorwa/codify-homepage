@@ -6,10 +6,10 @@ import Hero from "../components/Hero.astro";
 import Portfolio from "../components/Portfolio.astro";
 import Services from "../components/Services.astro";
 import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
+import { NAV_MAIN } from "../content/menuItems";
 ---
 
-<Layout>
+<Layout nav={NAV_MAIN}>
     <Hero />
     <Services />
     <About />

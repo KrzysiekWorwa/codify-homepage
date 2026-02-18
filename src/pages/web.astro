@@ -1,9 +1,9 @@
 ---
 import Hero from "../components/Hero.astro";
-import WebLayout from "../layouts/WebLayout.astro";
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import { NAV_WEB } from "../content/menuItems";
 ---
 
-<WebLayout>
-<Hero />
-</WebLayout>
+<Layout nav={NAV_WEB}>
+    <Hero />
+</Layout>

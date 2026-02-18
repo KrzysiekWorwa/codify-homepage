@@ -1,11 +1,14 @@
 ---
 import MobileMenu from "./MobileMenu.astro";
 import Navigation from "./Navigation.astro";
+import type { NavData } from "../content/menuItems";
+
+const { nav } = Astro.props as { nav: NavData };
 ---
 
 <header>
     <nav>
-        <Navigation />
-        <MobileMenu />
+        <Navigation nav={nav} />
+        <MobileMenu nav={nav} />
     </nav>
 </header>

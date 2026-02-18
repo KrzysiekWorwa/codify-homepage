@@ -3,6 +3,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE } from "../content/site";
 import ContactSection from "../components/ContactSection.astro";
+import "../styles/global.css";
+import type { NavData } from "../content/menuItems";
+
+const { nav } = Astro.props as { nav: NavData };
 ---
 
 <html lang={SITE.lang}>
@@ -40,9 +44,11 @@ import ContactSection from "../components/ContactSection.astro";
     </head>
 
     <body>
-        <Header />
-        <slot />
+        <Header nav={nav} />
+        <main>
+            <slot />
+        </main>
         <ContactSection />
-        <Footer />
+        <Footer nav={nav} />
     </body>
 </html>

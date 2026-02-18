@@ -11,7 +11,10 @@ import { SERVICES } from "../content/services";
             const Icon = service.icon;
 
             return (
-                <a href={service.href} class="block">
+                <a
+                    href={`${import.meta.env.BASE_URL}${service.href}`}
+                    class="block"
+                >
                     <div
                         class="group relative overflow-hidden text-primary flex flex-col gap-7 bg-white py-15 px-10 transition-all duration-300 hover:text-secondary group-active:text-seconda  hover:scale-[1.03]
             active:scale-[0.98] h-full shadow-lg rounded-lg"

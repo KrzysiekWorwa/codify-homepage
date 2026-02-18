@@ -18,7 +18,7 @@ export const SERVICES = {
                 "Tworzymy nowoczesne, responsywne strony WWW, kodowane od zera, bez szablonów. Gwarancja czystego kodu, najwyższej wydajności i pełnej personalizacji dla Twojego biznesu. Pomagamy wyróżnić się w sieci, zwiększyć widoczność w Google i przyciągnąć klientów.",
             icon: WebIcon,
             bgImage: WebImage,
-            href: "web",
+            href: "web/",
         },
         {
             title: "Wirtualne spacery 360°",
@@ -26,7 +26,7 @@ export const SERVICES = {
                 "Pokaż się z zupełnie nowej perspektywy. Pozwól klientom „wejść” do Twojego obiektu jeszcze przed wizytą. To najlepszy sposób prezentacji lokalu i wyróżnienia się na tle konkurencji. Przekształć statyczną ofertę w angażujące doświadczenie. Idealne dla hoteli, domków, restauracji i biur nieruchomości.",
             icon: VirtualIcon,
             bgImage: VirtualImage,
-            href: "tour",
+            href: "tour/",
         },
         {
             title: "Tworzenie wizualizacji 3D",
@@ -34,7 +34,7 @@ export const SERVICES = {
                 "Realistyczne wizualizacje wnętrz, budynków i koncepcji projektowych. Świetne narzędzie dla deweloperów, architektów i firm marketingowych. Pomagamy markom zaprezentować ich ofertę w atrakcyjnej, dopracowanej formie, zanim produkt fizycznie trafi na rynek.",
             icon: GraphicIcon,
             bgImage: GraphicImage,
-            href: "graphic",
+            href: "graphic/",
         },
     ],
 };
