@@ -9,6 +9,7 @@ import Layout from "../layouts/Layout.astro";
 import { NAV_MAIN } from "../content/menuItems";
 import { HERO_MAIN } from "../content/hero";
 import { PORTFOLIO_MAIN } from "../content/portfolio";
+import { FAQ_MAIN } from "../content/faq";
 ---
 
 <Layout nav={NAV_MAIN}>
@@ -17,5 +18,5 @@ import { PORTFOLIO_MAIN } from "../content/portfolio";
     <About />
     <CTASection />
     <Portfolio data={PORTFOLIO_MAIN} />
-    <FaqSection />
+    <FaqSection data={FAQ_MAIN} />
 </Layout>

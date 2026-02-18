@@ -2,27 +2,30 @@
 import ContentHeader from "./ContentHeader.astro";
 import ContentSubHeader from "./ContentSubHeader.astro";
 import ContentDescription from "./ContentDescription.astro";
-import { FAQ } from "../content/faq";
 import Close from "../assets/icons/close.svg";
 import Button from "./Button.astro";
+import type { FaqData } from "../content/faq";
+import { resolveHref } from "../lib/resolveHref";
+
+const { data } = Astro.props as { data: FaqData };
 ---
 
-<section id={FAQ.id} class="bg-secondary scroll-mt-15 md:scroll-mt-22.5">
+<section id={data.id} class="bg-secondary scroll-mt-15 md:scroll-mt-22.5">
     <div
         class="max-w-360 m-auto py-10 md:py-30 px-5 lg:px-1"
         data-aos="fade-up"
     >
-        <ContentHeader text={FAQ.header} class="text-primary" />
-        <ContentSubHeader text={FAQ.subHeader} class="gradient-dark mx-auto" />
+        <ContentHeader text={data.header} class="text-primary" />
+        <ContentSubHeader text={data.subHeader} class="gradient-dark mx-auto" />
         <ContentDescription
-            text={FAQ.description}
+            text={data.description}
             class="text-primary-lighter text-center mx-auto"
         />
 
         <div class="my-10 space-y-3 md:px-15">
             {
-                FAQ.items.map((item) => (
-                    <details class="faq-item rounded-lg border-2 border-dark/20 bg-white hover:border-dark/50 transition-all duration-500 ">
+                data.items.map((item) => (
+                    <details class="faq-item rounded-lg border-2 border-dark/20 bg-white hover:border-dark/50 transition-all duration-500">
                         <summary class="faq-summary flex items-center justify-between gap-4 p-5 cursor-pointer select-none">
                             <span class="text-lg md:text-xl font-semibold text-primary">
                                 {item.q}
@@ -42,17 +45,21 @@ import Button from "./Button.astro";
                 ))
             }
         </div>
+
         <div class="flex flex-col items-center justify-center mt-10 md:mt-25">
             <ContentSubHeader
-                text={FAQ.ctaHeader}
+                text={data.ctaHeader}
                 class="gradient-dark text-center mx-0"
             />
             <ContentDescription
-                text={FAQ.ctaDescription}
+                text={data.ctaDescription}
                 class="text-primary-lighter text-center"
             />
             <div class="mt-5">
-                <Button href={FAQ.button.href} text={FAQ.button.label} />
+                <Button
+                    href={resolveHref(data.button.href)}
+                    text={data.button.label}
+                />
             </div>
         </div>
     </div>
@@ -78,6 +85,7 @@ import Button from "./Button.astro";
         height: 0;
     }
 </style>
+
 <script>
     import { initFaqAccordion } from "../scripts/faqAnimation";
 
