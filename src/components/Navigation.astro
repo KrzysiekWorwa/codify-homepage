@@ -3,16 +3,9 @@ import Logo from "../assets/icons/Codify-logo-ciemne.svg";
 import Button from "./Button.astro";
 import BurgerButton from "./BurgerButton.astro";
 import type { NavData } from "../content/menuItems";
+import { resolveHref } from "../lib/resolveHref";
 
 const { nav } = Astro.props as { nav: NavData };
-
-const resolveHref = (href: string) => {
-    if (!href) return import.meta.env.BASE_URL;
-    if (href.startsWith("#")) return href;
-    if (href.startsWith("http")) return href;
-
-    return `${import.meta.env.BASE_URL}${href}`;
-};
 
 const homeHref = resolveHref(nav.homeHref ?? "#home");
 ---
