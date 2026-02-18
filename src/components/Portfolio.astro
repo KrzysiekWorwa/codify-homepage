@@ -2,27 +2,27 @@
 import ContentDescription from "./ContentDescription.astro";
 import ContentHeader from "./ContentHeader.astro";
 import ContentSubHeader from "./ContentSubHeader.astro";
-import { PORTFOLIO } from "../content/portfolio";
 import PortfolioSlider from "./PortfolioSlider.astro";
+import type { PortfolioData } from "../content/portfolio";
+
+const { data } = Astro.props as { data: PortfolioData };
 ---
 
 <section
-    id={PORTFOLIO.id}
+    id={data.id}
     class="bg-dark scroll-mt-15 md:scroll-mt-22.5 pb-10 md:pb-30"
 >
     <div
         data-aos="fade-up"
         class="max-w-360 flex flex-col items-center justify-center m-auto pt-10 md:pt-30 pb-5 md:pb-15 px-5 lg:px-1"
     >
-        <ContentHeader text={PORTFOLIO.header} class="text-secondary" />
-        <ContentSubHeader
-            text={PORTFOLIO.subHeader}
-            class="gradient-light"
-        />
+        <ContentHeader text={data.header} class="text-secondary" />
+        <ContentSubHeader text={data.subHeader} class="gradient-light" />
         <ContentDescription
-            text={PORTFOLIO.description}
+            text={data.description}
             class="text-center text-secondary"
         />
     </div>
-    <PortfolioSlider />
+
+    <PortfolioSlider items={data.items} />
 </section>

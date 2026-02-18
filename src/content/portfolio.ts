@@ -22,13 +22,15 @@ export type PortfolioItem = {
     label: string;
 };
 
-export const PORTFOLIO: {
+export interface PortfolioData {
     id: string;
     header: string;
     subHeader: string;
     description: string;
     items: PortfolioItem[];
-} = {
+}
+
+export const PORTFOLIO_MAIN: PortfolioData = {
     id: "portfolio",
     header: "Portfolio",
     subHeader: "Tak wyróżniamy marki online",
@@ -130,6 +132,48 @@ export const PORTFOLIO: {
             href: "https://www.artstation.com/artwork/lGeW9O",
             image: img12,
             label: "Odwiedź galerię",
+        },
+    ],
+};
+
+export const PORTFOLIO_WEB: PortfolioData = {
+    id: "portfolio",
+    header: "Portfolio",
+    subHeader: "Tak wyróżniamy marki online",
+    description:
+        "Każdy projekt pokazuje to, co robimy najlepiej — zamieniamy ofertę w nowoczesne, wirtualne doświadczenie.",
+    items: [
+        {
+            category: "WWW / Landing Page",
+            title: "Dj Paradise - strona firmowa",
+            description: "Nowoczesna wizytówka typu One Page, która przyciąga wzrok i skutecznie promuje ofertę muzyczną oraz portfolio",
+            href: "https://djparadise.pl/",
+            image: img1,
+            label: "Odwiedź stronę",
+        },
+        {
+            category: "WWW / Strona firmowa",
+            title: "Latarnia Sukcesu - strona firmowa",
+            description: "Biznesowy Landing Page, który w czytelny sposób przedstawia ofertę firmy",
+            href: "https://krzysiekworwa.github.io/latarnia-sukcesu-homepage/",
+            image: img4,
+            label: "Odwiedź stronę",
+        },
+        {
+            category: "WWW / Strona firmowa",
+            title: "Czorsztynianka - strona firmowa",
+            description: "Kompleksowa platforma prezentująca ofertę rejsów, noclegów i wypożyczalni sprzętu",
+            href: "https://zalewczorsztynski.com/",
+            image: img7,
+            label: "Odwiedź stronę",
+        },
+        {
+            category: "WWW / Landing Page",
+            title: "Wirtualne portfolio",
+            description: "Wirtualna przestrzeń prezentująca przekrój umiejętności i zrealizowanych projektów",
+            href: "https://krzysiekworwa.github.io/personal-homepage/",
+            image: img10,
+            label: "Odwiedź stronę",
         },
     ],
 };

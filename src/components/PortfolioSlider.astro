@@ -3,20 +3,24 @@ import { Picture } from "astro:assets";
 import SliderButton from "./SliderButton.astro";
 import RightArrow from "../assets/icons/arrow-right.svg";
 import LeftArrow from "../assets/icons/arrow-left.svg";
-import { PORTFOLIO } from "../content/portfolio";
+import type { PortfolioItem } from "../content/portfolio";
+
+const { items } = Astro.props as { items: PortfolioItem[] };
 ---
 
 <div class="relative text-secondary">
-    <SliderButton direction="prev" ariaLabel="Previous"
-        ><LeftArrow class="w-5 h-5 md:w-7 md:h-7" /></SliderButton
-    >
-    <SliderButton direction="next" ariaLabel="Next"
-        ><RightArrow class="w-5 h-5 md:w-7 md:h-7" /></SliderButton
-    >
+    <SliderButton direction="prev" ariaLabel="Previous">
+        <LeftArrow class="w-5 h-5 md:w-7 md:h-7" />
+    </SliderButton>
+
+    <SliderButton direction="next" ariaLabel="Next">
+        <RightArrow class="w-5 h-5 md:w-7 md:h-7" />
+    </SliderButton>
+
     <div class="swiper portfolio-swiper">
         <div class="swiper-wrapper">
             {
-                PORTFOLIO.items.map((p) => (
+                items.map((p) => (
                     <div class="swiper-slide">
                         <div class="slide-inner">
                             <article class="w-full">
@@ -30,6 +34,7 @@ import { PORTFOLIO } from "../content/portfolio";
                                         decoding="async"
                                         class="block w-full aspect-video object-cover"
                                     />
+
                                     <a
                                         href={p.href}
                                         target="_blank"

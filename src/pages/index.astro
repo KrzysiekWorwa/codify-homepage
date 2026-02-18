@@ -8,6 +8,7 @@ import Services from "../components/Services.astro";
 import Layout from "../layouts/Layout.astro";
 import { NAV_MAIN } from "../content/menuItems";
 import { HERO_MAIN } from "../content/hero";
+import { PORTFOLIO_MAIN } from "../content/portfolio";
 ---
 
 <Layout nav={NAV_MAIN}>
@@ -15,6 +16,6 @@ import { HERO_MAIN } from "../content/hero";
     <Services />
     <About />
     <CTASection />
-    <Portfolio />
+    <Portfolio data={PORTFOLIO_MAIN} />
     <FaqSection />
 </Layout>
