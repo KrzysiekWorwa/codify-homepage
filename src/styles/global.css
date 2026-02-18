@@ -20,12 +20,13 @@
   background: linear-gradient(
     to right,
     var(--color-dark) 0%,
-    #6b7280 50%,
+    #868991 50%,
     var(--color-dark) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  width: fit-content;
 }
 
 @utility gradient-light {
