@@ -1,4 +1,17 @@
-export const HERO = {
+export interface HeroButton {
+  href: string;
+  label: string;
+}
+
+export interface HeroData {
+  id: string;
+  h1: string;
+  h2: string[];
+  button?: HeroButton;
+  button2?: HeroButton;
+}
+
+export const HERO_MAIN: HeroData = {
   id: "home",
   h1: "Zamień swoją ofertę w wirtualne doświadczenie",
   h2: [
@@ -6,12 +19,14 @@ export const HERO = {
     "Wirtualne spacery 360°",
     "Wizualizacje 3D",
   ],
-  button: {
-    href: "#contact",
-    label: "Wycena",
-  },
-  buttonOffer: {
-    href: "#services",
-    label: "Usługi",
-  }
-}
+  button: { href: "#contact", label: "Wycena" },
+  button2: { href: "#services", label: "Usługi" },
+};
+
+export const HERO_WEB: HeroData = {
+  id: "home",
+  h1: "Tworzenie stron internetowych",
+  h2: ["Szybkość", "SEO", "Nowoczesny design"],
+  button: { href: "#contact", label: "Darmowa wycena" },
+  button2: { href: "#oferta", label: "Zobacz ofertę" },
+};

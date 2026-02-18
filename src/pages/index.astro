@@ -7,10 +7,11 @@ import Portfolio from "../components/Portfolio.astro";
 import Services from "../components/Services.astro";
 import Layout from "../layouts/Layout.astro";
 import { NAV_MAIN } from "../content/menuItems";
+import { HERO_MAIN } from "../content/hero";
 ---
 
 <Layout nav={NAV_MAIN}>
-    <Hero />
+    <Hero data={HERO_MAIN} />
     <Services />
     <About />
     <CTASection />

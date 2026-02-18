@@ -2,8 +2,9 @@
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import { NAV_WEB } from "../content/menuItems";
+import { HERO_WEB } from "../content/hero";
 ---
 
 <Layout nav={NAV_WEB}>
-    <Hero />
+    <Hero data={HERO_WEB} />
 </Layout>

@@ -1,36 +1,56 @@
 ---
-import { HERO } from "../content/hero";
 import Typewriter from "astro-typewriter";
 import Button from "./Button.astro";
+import type { HeroData } from "../content/hero";
+import { resolveHref } from "../lib/resolveHref";
+
+const { data } = Astro.props as { data: HeroData };
+const buttonsCount = (data.button ? 1 : 0) + (data.button2 ? 1 : 0);
+const gridColsClass = buttonsCount > 1 ? "grid-cols-2" : "grid-cols-1";
 ---
 
-<section id={HERO.id}>
+<section id={data.id}>
     <div
         class="relative flex-col h-screen flex items-center justify-center bg-[linear-gradient(180deg,rgba(38,40,52,1)_25%,rgba(0,0,0,1)_100%)] text-center"
     >
         <div id="particles-js" class="absolute inset-0 z-10"></div>
+
         <div data-aos="fade-up" class="mx-2">
             <h1
                 class="text-[clamp(2.5rem,6vw,8rem)] leading-tight font-semibold gradient-light"
             >
-                {HERO.h1}
+                {data.h1}
             </h1>
+
             <h2
                 class="text-[clamp(1.25rem,3vw,3rem)] bg-linear-to-b from-dark from-0% via-secondary via-50% to-dark to-100% bg-clip-text text-transparent my-2"
             >
-                <Typewriter messages={HERO.h2} class="tw" />
+                <Typewriter messages={data.h2} class="tw" />
             </h2>
         </div>
+
         <div
             data-aos="fade-up"
-            class="relative z-20 mt-3 md:mt-10 grid grid-cols-2 gap-3 sm:gap-10 justify-center"
+            class={`relative z-20 mt-3 md:mt-10 grid ${gridColsClass} gap-3 sm:gap-10 justify-center`}
         >
-            <Button href={HERO.button.href} text={HERO.button.label} />
-            <Button
-                href={HERO.buttonOffer.href}
-                text={HERO.buttonOffer.label}
-                variant="outlined"
-            />
+            {
+                data.button && (
+                    <Button
+                        href={resolveHref(data.button.href)}
+                        text={data.button.label}
+                    />
+                )
+            }
+
+            {
+                data.button2 && (
+                    <Button
+                        href={resolveHref(data.button2.href)}
+                        text={data.button2.label}
+                        variant="outlined"
+                    />
+                )
+            }
         </div>
     </div>
 </section>
