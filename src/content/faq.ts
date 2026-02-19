@@ -64,6 +64,41 @@ export const FAQ_MAIN: FaqData = {
     ],
 };
 
+export const FAQ_WEB: FaqData = {
+    id: "faq",
+    header: "FAQ",
+    subHeader: "Najczęstsze pytania",
+    description: "Zebraliśmy odpowiedzi na pytania, które najczęściej pojawiają się przed startem współpracy.",
+    ctaHeader: "Masz więcej pytań?",
+    ctaDescription: "Nie znalazłeś odpowiedzi na swoje pytanie lub masz ich więcej? Napisz do nas, z przyjemnością odpowiemy na wszytskie z nich.",
+    button: {
+        href: "#contact",
+        label: "Kontakt",
+    },
+    items: [
+        {
+            q: "Czym różni się wirtualny spacer od zwykłej galerii zdjęć?",
+            a: "Spacer 360° to interaktywne doświadczenie. Użytkownik sam decyduje, gdzie patrzy i dokąd idzie. To buduje ogromne zaufanie ponieważ pokazujesz realną przestrzeń, której nie da się ukryć za kadrem zwykłego zdjęcia."
+        },
+        {
+            q: "Jak długo trwa sesja zdjęciowa w moim obiekcie?",
+            a: "W zależności od metrażu i liczby pomieszczeń, sesja trwa zazwyczaj od 1 do 3 godzin. Dbamy o to, by proces był jak najmniej uciążliwy dla bieżącego funkcjonowania Twojego biznesu."
+        },
+        {
+            q: "Ile trwa czas realizacji zlecenia na wirtualny spacer?",
+            a: "Standardowo proces zajmuje od 1 do 2 tygodni, w zależności od liczby pomieszczeń i stopnia rozbudowania projektu. Po sesji zdjęciowej potrzebujemy czasu na precyzyjną postprodukcję: retusz, korekcję kolorystyczną, łączenie panoram oraz integrację interaktywnych funkcji, aby finalny spacer był płynny i dopracowany w każdym detalu.",
+        },
+        {
+            q: "Gdzie mogę wykorzystać gotowy spacer 360°?",
+            a: "Na własnej stronie www, w wizytówce Google Maps, na portalach ogłoszeniowych oraz w mediach społecznościowych."
+        },
+        {
+            q: "Czy realizujecie zlecenia w całej Polsce?",
+            a: "W przypadku wirtualnych spacerów 360°, dojeżdżamy bezpośrednio do Twojego obiektu po wcześniejszym ustaleniu szczegółów i dogodnego terminu sesji.",
+        },
+    ],
+};
+
 export const FAQ_TOUR: FaqData = {
     id: "faq",
     header: "FAQ",
