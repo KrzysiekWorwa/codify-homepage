@@ -86,7 +86,7 @@ const servicesItem = nav.menu.find((i) => i.children?.length);
     servicesItem?.children?.length && (
         <div
             id="services-dropdown"
-            class="services-dropdown fixed w-80 bg-primary lg:bg-black/30 backdrop-blur-0 md:backdrop-blur-xl opacity-0 invisible translate-y-2 transition-all duration-200 z-50"
+            class="services-dropdown fixed w-80 bg-primary lg:bg-black/30 backdrop-blur-0 md:backdrop-blur-xl opacity-0 invisible scale-y-0 origin-top transition-all duration-300 z-50"
         >
             <div class="py-2 text-center">
                 {servicesItem.children.map((child) => (
