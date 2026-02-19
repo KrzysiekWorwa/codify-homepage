@@ -20,14 +20,16 @@ const { nav } = Astro.props as { nav: NavData };
                         >
                             {item.label}
                         </a>
-                        <span class="text-secondary">▾</span>
+                        <span class="nav-caret text-secondary inline-block">
+                            ▾
+                        </span>
                     </summary>
 
                     <div class="mt-2 flex flex-col items-center gap-2">
                         {item.children.map((child) => (
                             <a
                                 href={resolveHref(child.href)}
-                                class="text-secondary block py-1 text-base font-medium"
+                                class={`w-full text-center text-secondary block py-1 text-base font-medium ${child.mobileOnly ? "lg:hidden" : ""}`}
                             >
                                 {child.label}
                             </a>
@@ -37,7 +39,7 @@ const { nav } = Astro.props as { nav: NavData };
             ) : (
                 <a
                     href={resolveHref(item.href)}
-                    class="text-secondary block py-1 text-xl font-medium"
+                    class="w-full text-secondary block py-1 text-center text-xl font-medium"
                 >
                     {item.label}
                 </a>
@@ -49,10 +51,21 @@ const { nav } = Astro.props as { nav: NavData };
         nav.cta && (
             <a
                 href={resolveHref(nav.cta.href)}
-                class="text-secondary block py-1 text-xl font-medium"
+                class="w-full text-center text-secondary block py-1 text-xl font-medium"
             >
                 {nav.cta.label}
             </a>
         )
     }
 </div>
+
+<style>
+    #mobile-menu details .nav-caret {
+        transition: transform 300ms ease;
+        transform: rotate(0deg);
+    }
+
+    #mobile-menu details[open] .nav-caret {
+        transform: rotate(180deg);
+    }
+</style>

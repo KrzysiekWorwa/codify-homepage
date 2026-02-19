@@ -2,6 +2,7 @@ export interface MenuItem {
   label: string;
   href: string;
   children?: MenuItem[];
+  mobileOnly?: boolean;
 }
 
 export interface NavData {
@@ -18,6 +19,7 @@ export const NAV_MAIN: NavData = {
       label: "Usługi",
       href: "#services",
       children: [
+        { label: "Usługi", href: "#services", mobileOnly: true },
         { label: "Tworzenie stron internetowych", href: "tworzenie-stron-internetowych/" },
         { label: "Wirtualne spacery 360°", href: "wirtualny-spacer-360/" },
         { label: "Wizualizacje 3D", href: "wizualizacje-3d/" },

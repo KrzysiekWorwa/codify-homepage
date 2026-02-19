@@ -50,7 +50,7 @@ const servicesItem = nav.menu.find((i) => i.children?.length);
                                 aria-expanded="false"
                             >
                                 {item.label}
-                                <span class="text-secondary group-hover:text-accent transition-colors duration-500 ease">
+                                <span class="nav-caret text-secondary group-hover:text-accent transition-colors duration-500 ease inline-block">
                                     ▾
                                 </span>
                             </a>
@@ -92,7 +92,7 @@ const servicesItem = nav.menu.find((i) => i.children?.length);
                 {servicesItem.children.map((child) => (
                     <a
                         href={resolveHref(child.href)}
-                        class="block px-4 py-3 text-secondary hover:text-accent transition-colors"
+                        class={`block text-lg px-4 py-3 text-secondary hover:text-accent transition-colors ${child.mobileOnly ? "lg:hidden" : ""}`}
                     >
                         {child.label}
                     </a>
@@ -110,6 +110,14 @@ const servicesItem = nav.menu.find((i) => i.children?.length);
         top: -31px;
         height: 31px;
         background: transparent;
+    }
+    #services-trigger .nav-caret {
+        transition: transform 300ms ease;
+        transform: rotate(0deg);
+    }
+
+    #services-trigger[aria-expanded="true"] .nav-caret {
+        transform: rotate(180deg);
     }
 </style>
 
