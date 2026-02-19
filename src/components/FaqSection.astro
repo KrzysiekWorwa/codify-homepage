@@ -10,7 +10,10 @@ import { resolveHref } from "../lib/resolveHref";
 const { data } = Astro.props as { data: FaqData };
 ---
 
-<section id={data.id} class="bg-secondary md:bg-radial-light scroll-mt-15 md:scroll-mt-22.5">
+<section
+    id={data.id}
+    class="bg-secondary md:bg-radial-light scroll-mt-15 md:scroll-mt-22.5"
+>
     <div
         class="max-w-360 m-auto py-10 md:py-30 px-5 lg:px-1"
         data-aos="fade-up"
@@ -46,15 +49,15 @@ const { data } = Astro.props as { data: FaqData };
             }
         </div>
 
-        <div class="flex flex-col items-center justify-center mt-10 md:mt-25">
-            <ContentSubHeader
-                text={data.ctaHeader}
-                class="gradient-dark text-center mx-0"
-            />
-            <ContentDescription
-                text={data.ctaDescription}
-                class="text-primary-lighter text-center"
-            />
+        <div class="flex flex-col items-center justify-center">
+            <h3
+                class="font-semibold text-primary text-center text-lg md:text-2xl"
+            >
+                {data.ctaHeader}
+            </h3>
+            <p class="text-primary-lighter text-center text-lg md:text-xl mt-1">
+                {data.ctaDescription}
+            </p>
             <div class="mt-5">
                 <Button
                     href={resolveHref(data.button.href)}

@@ -31,7 +31,7 @@ export const NAV_WEB: NavData = {
     { label: "Cennik", href: "#cennik" },
     { label: "FAQ", href: "#faq" },
   ],
-  cta: { label: "Kontakt", href: "/#contact" },
+  cta: { label: "Kontakt", href: "#contact" },
 };
 
 export const NAV_TOUR: NavData = {
@@ -45,5 +45,5 @@ export const NAV_TOUR: NavData = {
     { label: "Portfolio", href: "#portfolio" },
     { label: "FAQ", href: "#faq" },
   ],
-  cta: { label: "Kontakt", href: "/#contact" },
+  cta: { label: "Kontakt", href: "#contact" },
 };
