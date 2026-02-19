@@ -4,17 +4,19 @@ import Button from "./Button.astro";
 import BurgerButton from "./BurgerButton.astro";
 import type { NavData } from "../content/menuItems";
 import { resolveHref } from "../lib/resolveHref";
+import { SERVICES } from "../content/services";
 
 const { nav } = Astro.props as { nav: NavData };
 
 const homeHref = resolveHref(nav.homeHref ?? "#home");
+
+// bierzemy submenu z nav (pierwszy item z children)
+const servicesItem = nav.menu.find((i) => i.children?.length);
 ---
 
 <div
     id="main-menu"
-    class="fixed top-0 left-0 w-full h-15 md:h-22.5
-         bg-primary lg:bg-black/30 backdrop-blur-0 md:backdrop-blur-xl
-         z-50 flex text-center"
+    class="fixed top-0 left-0 w-full h-15 md:h-22.5 bg-primary lg:bg-black/30 backdrop-blur-0 md:backdrop-blur-xl z-50 flex text-center"
 >
     <div
         class="w-full max-w-360 mx-auto px-5 flex items-center justify-between gap-5"
@@ -37,14 +39,31 @@ const homeHref = resolveHref(nav.homeHref ?? "#home");
 
         <div class="hidden lg:flex lg:gap-7 lg:items-center">
             {
-                nav.menu.map((item) => (
-                    <a
-                        href={resolveHref(item.href)}
-                        class="text-secondary md:text-xl font-medium hover:text-accent transition-colors duration-500 ease"
-                    >
-                        {item.label}
-                    </a>
-                ))
+                nav.menu.map((item) =>
+                    item.children?.length ? (
+                        <div class="relative group">
+                            <a
+                                id="services-trigger"
+                                href={resolveHref(item.href)}
+                                class="text-secondary md:text-xl font-medium hover:text-accent transition-colors duration-500 ease inline-flex items-center gap-0"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                {item.label}
+                                <span class="text-secondary group-hover:text-accent transition-colors duration-500 ease">
+                                    ▾
+                                </span>
+                            </a>
+                        </div>
+                    ) : (
+                        <a
+                            href={resolveHref(item.href)}
+                            class="text-secondary md:text-xl font-medium hover:text-accent transition-colors duration-500 ease"
+                        >
+                            {item.label}
+                        </a>
+                    ),
+                )
             }
         </div>
 
@@ -63,3 +82,37 @@ const homeHref = resolveHref(nav.homeHref ?? "#home");
         <BurgerButton />
     </div>
 </div>
+{
+    servicesItem?.children?.length && (
+        <div
+            id="services-dropdown"
+            class="services-dropdown fixed w-80 bg-primary lg:bg-black/30 backdrop-blur-0 md:backdrop-blur-xl opacity-0 invisible translate-y-2 transition-all duration-200 z-50"
+        >
+            <div class="py-2 text-center">
+                {servicesItem.children.map((child) => (
+                    <a
+                        href={resolveHref(child.href)}
+                        class="block px-4 py-3 text-secondary hover:text-accent transition-colors"
+                    >
+                        {child.label}
+                    </a>
+                ))}
+            </div>
+        </div>
+    )
+}
+<style>
+    .services-dropdown::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -31px;
+        height: 31px;
+        background: transparent;
+    }
+</style>
+
+<script>
+    import "../scripts/servicesDropdown";
+</script>

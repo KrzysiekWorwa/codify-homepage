@@ -10,14 +10,39 @@ const { nav } = Astro.props as { nav: NavData };
     class="fixed top-15 left-0 w-full flex flex-col items-center bg-primary px-6 gap-4 lg:hidden z-60 overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
 >
     {
-        nav.menu.map((item) => (
-            <a
-                href={resolveHref(item.href)}
-                class="text-secondary block py-1 text-xl font-medium"
-            >
-                {item.label}
-            </a>
-        ))
+        nav.menu.map((item) =>
+            item.children?.length ? (
+                <details class="w-full">
+                    <summary class="list-none flex items-center justify-center gap-0 text-secondary py-1 text-xl font-medium cursor-pointer select-none">
+                        <a
+                            href={resolveHref(item.href)}
+                            class="text-secondary block py-1 pl-3 text-xl font-medium"
+                        >
+                            {item.label}
+                        </a>
+                        <span class="text-secondary">▾</span>
+                    </summary>
+
+                    <div class="mt-2 flex flex-col items-center gap-2">
+                        {item.children.map((child) => (
+                            <a
+                                href={resolveHref(child.href)}
+                                class="text-secondary block py-1 text-base font-medium"
+                            >
+                                {child.label}
+                            </a>
+                        ))}
+                    </div>
+                </details>
+            ) : (
+                <a
+                    href={resolveHref(item.href)}
+                    class="text-secondary block py-1 text-xl font-medium"
+                >
+                    {item.label}
+                </a>
+            ),
+        )
     }
 
     {
