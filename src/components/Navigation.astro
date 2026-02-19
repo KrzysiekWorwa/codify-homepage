@@ -13,7 +13,7 @@ const homeHref = resolveHref(nav.homeHref ?? "#home");
 <div
     id="main-menu"
     class="fixed top-0 left-0 w-full h-15 md:h-22.5
-         bg-primary md:bg-black/30 backdrop-blur-0 md:backdrop-blur-xl
+         bg-primary lg:bg-black/30 backdrop-blur-0 md:backdrop-blur-xl
          z-50 flex text-center"
 >
     <div
@@ -35,12 +35,12 @@ const homeHref = resolveHref(nav.homeHref ?? "#home");
             </p>
         </a>
 
-        <div class="hidden md:flex md:gap-7 md:items-center">
+        <div class="hidden lg:flex lg:gap-7 lg:items-center">
             {
                 nav.menu.map((item) => (
                     <a
                         href={resolveHref(item.href)}
-                        class="text-secondary text-xl font-medium hover:text-accent transition-colors duration-500 ease"
+                        class="text-secondary md:text-xl font-medium hover:text-accent transition-colors duration-500 ease"
                     >
                         {item.label}
                     </a>
@@ -50,7 +50,7 @@ const homeHref = resolveHref(nav.homeHref ?? "#home");
 
         {
             nav.cta && (
-                <div class="hidden md:block">
+                <div class="hidden lg:block">
                     <Button
                         text={nav.cta.label}
                         href={resolveHref(nav.cta.href)}

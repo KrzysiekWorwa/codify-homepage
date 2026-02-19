@@ -43,7 +43,7 @@ export const NAV_TOUR: NavData = {
     { label: "Zalety", href: "#advantages" },
     { label: "Realizacja", href: "#process" },
     { label: "Portfolio", href: "#portfolio" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Pytania", href: "#faq" },
   ],
   cta: { label: "Kontakt", href: "#contact" },
 };

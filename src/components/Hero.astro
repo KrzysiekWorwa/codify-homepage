@@ -6,7 +6,7 @@ import { resolveHref } from "../lib/resolveHref";
 
 const { data } = Astro.props as { data: HeroData };
 const buttonsCount = (data.button ? 1 : 0) + (data.button2 ? 1 : 0);
-const gridColsClass = buttonsCount > 1 ? "grid-cols-2" : "grid-cols-1";
+const gridColsClass = buttonsCount > 1 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1";
 ---
 
 <section id={data.id}>
@@ -31,7 +31,7 @@ const gridColsClass = buttonsCount > 1 ? "grid-cols-2" : "grid-cols-1";
 
         <div
             data-aos="fade-up"
-            class={`relative z-20 mt-3 md:mt-10 grid ${gridColsClass} gap-3 sm:gap-10 justify-center`}
+            class={`relative z-20 mt-3 md:mt-10 grid ${gridColsClass} gap-3 md:gap-10 justify-center`}
         >
             {
                 data.button && (
