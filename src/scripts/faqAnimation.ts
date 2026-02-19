@@ -10,11 +10,9 @@ export function initFaqAccordion() {
         if (el.dataset.faqInit === "1") return;
         el.dataset.faqInit = "1";
 
-        const summary = details.querySelector("summary");
         const content = details.querySelector(".faq-content");
         const inner = details.querySelector(".faq-inner");
 
-        if (!(summary instanceof HTMLElement)) return;
         if (!(content instanceof HTMLElement)) return;
         if (!(inner instanceof HTMLElement)) return;
 
@@ -23,7 +21,7 @@ export function initFaqAccordion() {
 
         let controls: any = null;
 
-        summary.addEventListener("click", (e) => {
+        details.addEventListener("click", (e) => {
             e.preventDefault();
 
             if (controls?.cancel) controls.cancel();

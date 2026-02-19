@@ -6,16 +6,13 @@ import ContentSubHeader from "./ContentSubHeader.astro";
 import { SERVICES } from "../content/services";
 ---
 
-<section id={SERVICES.id} class="scroll-mt-15 md:scroll-mt-22.5">
+<section id={SERVICES.id} class="bg-secondary md:bg-radial-light scroll-mt-15 md:scroll-mt-22.5">
     <div
         data-aos="fade-up"
         class="max-w-360 flex flex-col items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-1"
     >
         <ContentHeader text={SERVICES.header} class="text-primary" />
-        <ContentSubHeader
-            text={SERVICES.subHeader}
-            class="gradient-dark"
-        />
+        <ContentSubHeader text={SERVICES.subHeader} class="gradient-dark" />
         <ContentDescription
             text={SERVICES.description}
             class="text-center text-primary"

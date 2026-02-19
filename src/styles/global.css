@@ -41,12 +41,35 @@
   color: transparent;
 }
 
+@utility bg-radial-light {
+  background: radial-gradient(
+    circle at center,
+    #FFFFFF 0%,
+    #FFFFFF 40%,
+    #D9D9D9 70%,
+    #BFBFBF 100%
+  );
+}
+
+@utility bg-radial-dark {
+  background: radial-gradient(
+    circle,
+    #1F2226 0%,
+    #0D0D0D 100%
+  );
+}
+
 html {
   @apply scroll-smooth;
 }
 
 body {
-    background-color: #f8f8f8;
+    background: #f8f8f8;
     margin: 0 auto;
     overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: white;
 }
