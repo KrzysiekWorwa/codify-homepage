@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
         burger.setAttribute("aria-expanded", "true");
         burger.classList.add("open");
         mobileMenu.classList.remove("max-h-0");
-        mobileMenu.classList.add("max-h-[400px]", "py-5");
+        mobileMenu.classList.add("max-h-[calc(100vh-60px)]", "pb-5");
     };
 
     const closeMenu = () => {
         burger.setAttribute("aria-expanded", "false");
         burger.classList.remove("open");
-        mobileMenu.classList.remove("max-h-[400px]", "py-5");
+        mobileMenu.classList.remove("max-h-[calc(100vh-60px)]", "pb-5");
         mobileMenu.classList.add("max-h-0");
     };
 
