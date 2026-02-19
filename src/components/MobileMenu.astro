@@ -13,13 +13,10 @@ const { nav } = Astro.props as { nav: NavData };
         nav.menu.map((item) =>
             item.children?.length ? (
                 <details class="w-full">
-                    <summary class="list-none flex items-center justify-center gap-0 text-secondary py-1 text-xl font-medium cursor-pointer select-none">
-                        <a
-                            href={resolveHref(item.href)}
-                            class="text-secondary block py-1 pl-3 text-xl font-medium"
-                        >
+                    <summary class="list-none flex items-center justify-center gap-1 text-secondary py-1 text-xl font-medium cursor-pointer select-none">
+                        <span class="text-secondary block py-1 pl-3 text-xl font-medium">
                             {item.label}
-                        </a>
+                        </span>
                         <span class="nav-caret text-secondary inline-block">
                             ▾
                         </span>

@@ -3,24 +3,29 @@
     method="POST"
     class="space-y-4 text-secondary"
 >
-    <label>Nazwa firmy / Imię</label>
+    <label for="name">Nazwa firmy / Imię</label>
     <input
+        id="name"
         type="text"
         name="Nazwa firmy / Imię"
         placeholder="np. Krzysiek"
+        autocomplete="name"
         required
         class="w-full p-3 rounded-lg border-2 border-secondary/40 focus:outline-secondary/50"
     />
-    <label>Email</label>
+    <label for="email">Email</label>
     <input
+        id="email"
         type="email"
         name="Email"
         placeholder="Twój email"
+        autocomplete="email"
         required
         class="w-full p-3 rounded-lg border-2 border-secondary/40 focus:outline-secondary/50"
     />
-    <label>Wiadomość</label>
+    <label for="message">Wiadomość</label>
     <textarea
+        id="message"
         rows="6"
         name="Wiadomość"
         placeholder="Opowiedz nam o swoim projekcie"
