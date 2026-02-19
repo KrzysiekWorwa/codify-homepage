@@ -17,7 +17,7 @@ export interface FaqData {
     items: FaqItem[];
 }
 
-export const FAQ_MAIN = {
+export const FAQ_MAIN: FaqData = {
     id: "faq",
     header: "FAQ",
     subHeader: "Najczęstsze pytania",
@@ -64,7 +64,7 @@ export const FAQ_MAIN = {
     ],
 };
 
-export const FAQ_WEB = {
+export const FAQ_TOUR: FaqData = {
     id: "faq",
     header: "FAQ",
     subHeader: "Najczęstsze pytania",

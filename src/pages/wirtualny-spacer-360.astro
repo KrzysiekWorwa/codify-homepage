@@ -1,19 +1,22 @@
 ---
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import AdvantagesSection from "../components/AdvantagesSection.astro";
 import { NAV_TOUR } from "../content/menuItems";
 import { HERO_TOUR } from "../content/hero";
 import { PORTFOLIO_TOUR } from "../content/portfolio";
 import Portfolio from "../components/Portfolio.astro";
 import FaqSection from "../components/FaqSection.astro";
 import DescriptionSection from "../components/DescriptionSection.astro";
-import { FAQ_WEB } from "../content/faq";
+import { FAQ_TOUR } from "../content/faq";
 import { DESCRIPTION_TOUR } from "../content/offerDescription";
+import { ADVANTAGES_TOUR } from "../content/advantages";
 ---
 
 <Layout nav={NAV_TOUR}>
     <Hero data={HERO_TOUR} />
     <DescriptionSection data={DESCRIPTION_TOUR} />
+    <AdvantagesSection data={ADVANTAGES_TOUR} />
     <Portfolio data={PORTFOLIO_TOUR} />
-    <FaqSection data={FAQ_WEB} />
+    <FaqSection data={FAQ_TOUR} />
 </Layout>

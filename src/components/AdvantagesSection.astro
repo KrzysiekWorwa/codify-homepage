@@ -1,0 +1,50 @@
+---
+import ContentDescription from "./ContentDescription.astro";
+import ContentHeader from "./ContentHeader.astro";
+import ContentSubHeader from "./ContentSubHeader.astro";
+import type { AdvantagesData } from "../content/advantages";
+
+const { data } = Astro.props as { data: AdvantagesData };
+---
+
+<section id={data.id} class="bg-radial-dark scroll-mt-15 md:scroll-mt-22.5">
+    <div
+        data-aos="fade-up"
+        class="max-w-360 flex flex-col items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-1"
+    >
+        <ContentHeader text={data.header} class="text-secondary" />
+        <ContentSubHeader text={data.subHeader} class="gradient-light" />
+        <ContentDescription
+            text={data.description}
+            class="text-center text-secondary"
+        />
+        <div
+            data-aos="fade-up"
+            class="pt-5 md:p-5 md:pt-15 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4 md:gap-5 justify-center"
+        >
+            {
+                data.items.map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                        <div class=" bg-primary p-5 transition-all duration-300 text-secondary hover:scale-[1.03] h-full shadow-lg rounded-lg">
+                            <div class="flex flex-col items-center gap-5">
+                                <div>
+                                    <Icon class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300" />
+                                </div>
+
+                                <h4 class="text-lg text-center font-semibold">
+                                    {item.title}
+                                </h4>
+
+                                <div class=" text-sm text-secondary text-center">
+                                    <p>{item.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                })
+            }
+        </div>
+    </div>
+</section>
