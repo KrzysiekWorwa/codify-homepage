@@ -77,24 +77,24 @@ export const FAQ_WEB = {
     },
     items: [
         {
-            q: "Jak wyglądają kroki rozpoczęcia współpracy i proces projektowy?",
-            a: "Nasz proces jest ustrukturyzowany: 1. Darmowa konsultacja i wywiad, podczas którego poznajemy Twoje cele biznesowe i grupę docelową. 2. Zebranie materiałów (logotypy, teksty, inspiracje). 3. Przygotowanie strategii i makiety. 4. Podpisanie umowy i wpłata zaliczki. 5. Realizacja projektu z regularnymi aktualizacjami postępów. Dzięki temu masz pełną kontrolę nad efektem końcowym.",
+            q: "Czym różni się wirtualny spacer od zwykłej galerii zdjęć?",
+            a: "Spacer 360° to interaktywne doświadczenie. Użytkownik sam decyduje, gdzie patrzy i dokąd idzie. To buduje ogromne zaufanie ponieważ pokazujesz realną przestrzeń, której nie da się ukryć za kadrem zwykłego zdjęcia."
         },
         {
-            q: "Ile trwa realizacja strony internetowej?",
-            a: "Zwykle proces zamyka się w 2–4 tygodniach. Czas zależy od skomplikowania projektu, liczby podstron oraz sprawności w dostarczeniu materiałów. Po etapie wywiadu i zebrania potrzeb, przedstawiamy Ci precyzyjny harmonogram prac.",
+            q: "Jak długo trwa sesja zdjęciowa w moim obiekcie?",
+            a: "W zależności od metrażu i liczby pomieszczeń, sesja trwa zazwyczaj od 1 do 3 godzin. Dbamy o to, by proces był jak najmniej uciążliwy dla bieżącego funkcjonowania Twojego biznesu."
         },
         {
-            q: "Czy pomagacie w zebraniu i przygotowaniu materiałów?",
-            a: "Oczywiście. Jeśli nie posiadasz profesjonalnych zdjęć czy gotowych tekstów, przeprowadzimy Cię przez ten proces. Doradzamy, jakie treści najlepiej sprzedają w Twojej branży, a w przypadku wirtualnych spacerów i wizualizacji — precyzyjnie określamy, jakie dane techniczne będą nam potrzebne.",
+            q: "Ile trwa czas realizacji zlecenia na wirtualny spacer?",
+            a: "Standardowo proces zajmuje od 1 do 2 tygodni, w zależności od liczby pomieszczeń i stopnia rozbudowania projektu. Po sesji zdjęciowej potrzebujemy czasu na precyzyjną postprodukcję: retusz, korekcję kolorystyczną, łączenie panoram oraz integrację interaktywnych funkcji, aby finalny spacer był płynny i dopracowany w każdym detalu.",
+        },
+        {
+            q: "Gdzie mogę wykorzystać gotowy spacer 360°?",
+            a: "Na własnej stronie www, w wizytówce Google Maps, na portalach ogłoszeniowych oraz w mediach społecznościowych."
         },
         {
             q: "Czy realizujecie zlecenia w całej Polsce?",
-            a: "Strony WWW oraz wizualizacje 3D tworzymy zdalnie, współpracując z klientami z całego kraju i zagranicy za pomocą wideokonferencji. W przypadku wirtualnych spacerów 360°, dojeżdżamy bezpośrednio do Twojego obiektu po wcześniejszym ustaleniu dogodnego terminu sesji.",
-        },
-        {
-            q: "Czy zajmujecie się SEO i optymalizacją szybkości strony?",
-            a: "Tak, to dla nas priorytet. Każdą stronę projektujemy zgodnie z wytycznymi Core Web Vitals. Dbamy o techniczne SEO (struktura nagłówków, alt-tagi, optymalizacja obrazów), dzięki czemu Twoja witryna jest szybka i gotowa do pozycjonowania w Google od pierwszego dnia.",
+            a: "W przypadku wirtualnych spacerów 360°, dojeżdżamy bezpośrednio do Twojego obiektu po wcześniejszym ustaleniu szczegółów i dogodnego terminu sesji.",
         },
     ],
 };

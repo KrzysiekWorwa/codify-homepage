@@ -30,3 +30,11 @@ export const HERO_WEB: HeroData = {
   button: { href: "#contact", label: "Darmowa wycena" },
   button2: { href: "#oferta", label: "Zobacz ofertę" },
 };
+
+export const HERO_TOUR: HeroData = {
+  id: "home",
+  h1: "Interaktywny wirtualny spacer 360°",
+  h2: ["Wyróżnij swoją ofertę", "Zamień oglądanie w doświadczenie", "Nowy wymiar prezentacji"],
+  button: { href: "#contact", label: "Wycena" },
+  button2: { href: "#oferta", label: "O usłudze" },
+};

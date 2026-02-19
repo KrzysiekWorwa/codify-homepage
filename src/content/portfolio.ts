@@ -177,3 +177,45 @@ export const PORTFOLIO_WEB: PortfolioData = {
         },
     ],
 };
+
+export const PORTFOLIO_TOUR: PortfolioData = {
+    id: "portfolio",
+    header: "Portfolio",
+    subHeader: "Wirtualne spacery 360° w praktyce",
+    description:
+        "Zobacz, jak wygląda cyfrowe zwiedzanie 360° i jak nowoczesna prezentacja wpływa na odbiór nieruchomości.",
+    items: [
+        {
+            category: "Wirtualny spacer 360°",
+            title: "Apartament Erica w Zakopanem",
+            description: "Prezentacja obiektu w 360° z nawigacją i hotspotami. Interaktywna podróż po wnętrzach, pozwalająca poczuć klimat górskiego wypoczynku",
+            href: "https://tour.panoee.net/6904a27a8eb46a7072e7d4c5/6904a4578eb46a0ac6e7d4ea",
+            image: img2,
+            label: "Zobacz w 360°",
+        },
+        {
+            category: "Wirtualny spacer 360°",
+            title: "Przystań gondoli Czorsztynianka w Czorsztynie",
+            description: "Prezentacja obiektu w 360° z nawigacją i hotspotami. Wirtualna przechadzka po malowniczej przystani, zachęcająca do odwiedzin nad zalewem",
+            href: "https://tour.panoee.net/czorsztynianka-przystan-w-czorsztynie/68f69c7cd87e79ace11b41d4",
+            image: img5,
+            label: "Zobacz w 360°",
+        },
+        {
+            category: "Wirtualny spacer 360°",
+            title: "Apartament Erica Deluxe w Zakopanem",
+            description: "Prezentacja obiektu w 360° z nawigacją i hotspotami. Pozwala w pełni ukazać detale wykończenia i luksusowy charakter obiektu",
+            href: "https://tour.panoee.net/69089476886027254905d2f9/6908bd6488602708a305d6a4",
+            image: img8,
+            label: "Zobacz w 360°",
+        },
+        {
+            category: "Wirtualny spacer 360°",
+            title: "Przystań gondoli Czorsztynianka w Niedzicy",
+            description: "Prezentacja obiektu w 360° z nawigacją i hotspotami. Panoramiczny widok na przystań, ułatwiający turystom orientację w terenie i poznanie infrastruktury przystani",
+            href: "https://tour.panoee.net/czorsztynianka-przystan-w-niedzicy/68ff4af382d350983307778d",
+            image: img11,
+            label: "Zobacz w 360°",
+        },
+    ],
+};
