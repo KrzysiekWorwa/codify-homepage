@@ -1,5 +1,5 @@
 import { ImageMetadata } from "astro";
-import img1 from "../assets/images/portfolio.webp"
+import img1 from "../assets/images/portfolio/niedzica_4.webp"
 
 export interface RealizationItem {
     title: string;
