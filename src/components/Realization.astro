@@ -14,7 +14,7 @@ const { data } = Astro.props as { data: RealizationData };
 >
     <div
         data-aos="fade-up"
-        class="max-w-360 flex flex-col items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-1"
+        class="max-w-360 flex flex-col items-center justify-center m-auto py-10 md:py-30 px-5"
     >
         <ContentHeader text={data.header} class="text-primary" />
         <ContentSubHeader text={data.subHeader} class="gradient-dark" />
@@ -22,10 +22,7 @@ const { data } = Astro.props as { data: RealizationData };
             text={data.description}
             class="text-center text-primary"
         />
-        <div
-            data-aos="fade-up"
-            class="bg-dark/10 mt-5 md:m-5 md:mt-15 rounded-lg"
-        >
+        <div class="bg-dark/10 mt-5 md:mt-15 rounded-lg md:rounded-b-none">
             <div
                 class="pt-5 px-5 md:pt-10 md:pb-10 lg:pt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center auto-rows-fr divide-y divide-white md:divide-y-0 lg:divide-x lg:divide-y-0 lg:divide-white"
             >
@@ -35,10 +32,7 @@ const { data } = Astro.props as { data: RealizationData };
                         const isFirstTwo = i < 2;
 
                         return (
-                            <div
-                                data-aos="fade-up"
-                                class="lg:px-5 pb-0 transition-all duration-300 text-primary h-full flex flex-col border-white md:max-lg:border-b md:max-lg:nth-last-[-n+2]:border-b-0 md:max-lg:odd:border-r md:max-lg:even:border-r-0"
-                            >
+                            <div class="lg:px-5 pb-0 transition-all duration-300 text-primary h-full flex flex-col border-white md:max-lg:border-b md:max-lg:nth-last-[-n+2]:border-b-0 md:max-lg:odd:border-r md:max-lg:even:border-r-0">
                                 <div
                                     class:list={[
                                         "flex flex-col items-start gap-5 flex-1 py-5 md:p-5",
@@ -64,22 +58,19 @@ const { data } = Astro.props as { data: RealizationData };
                     })
                 }
             </div>
-            <div>
-                <div
-                    data-aos="fade-up"
-                    class="w-full aspect-video md:aspect-2/1 lg:aspect-3/1 overflow-hidden pb-5 lg:pb-15 px-5 md:px-10"
-                >
-                    <Picture
-                        src={data.image}
-                        alt="about"
-                        width={1920}
-                        height={1080}
-                        loading="lazy"
-                        decoding="async"
-                        class="w-full h-full object-cover rounded-lg"
-                    />
-                </div>
-            </div>
+        </div>
+        <div
+            class="md:bg-dark/10 w-full aspect-video md:aspect-2/1 lg:aspect-3/1 overflow-hidden md:pb-10 lg:pb-15 md:px-10 pt-5 md:pt-0"
+        >
+            <Picture
+                src={data.image}
+                alt="about"
+                width={1920}
+                height={1080}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover rounded-lg"
+            />
         </div>
     </div>
 </section>

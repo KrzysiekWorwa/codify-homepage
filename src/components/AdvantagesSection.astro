@@ -10,7 +10,7 @@ const { data } = Astro.props as { data: AdvantagesData };
 <section id={data.id} class="bg-radial-dark scroll-mt-15 md:scroll-mt-22.5">
     <div
         data-aos="fade-up"
-        class="max-w-360 flex flex-col items-center justify-center m-auto py-10 md:py-30 px-5 lg:px-1"
+        class="max-w-360 flex flex-col m-auto py-10 md:py-30 px-5"
     >
         <ContentHeader text={data.header} class="text-secondary" />
         <ContentSubHeader text={data.subHeader} class="gradient-light" />
@@ -20,7 +20,7 @@ const { data } = Astro.props as { data: AdvantagesData };
         />
         <div
             data-aos="fade-up"
-            class="pt-5 md:p-5 md:pt-15 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4 md:gap-5 justify-center auto-rows-fr"
+            class="pt-5 md:pt-15 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4 md:gap-5 justify-center auto-rows-fr"
         >
             {
                 data.items.map((item) => {

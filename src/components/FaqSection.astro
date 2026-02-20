@@ -14,10 +14,7 @@ const { data } = Astro.props as { data: FaqData };
     id={data.id}
     class="bg-secondary md:bg-radial-light scroll-mt-15 md:scroll-mt-22.5"
 >
-    <div
-        class="max-w-360 m-auto py-10 md:py-30 px-5 lg:px-1"
-        data-aos="fade-up"
-    >
+    <div class="max-w-360 m-auto py-10 md:py-30 px-5" data-aos="fade-up">
         <ContentHeader text={data.header} class="text-primary" />
         <ContentSubHeader text={data.subHeader} class="gradient-dark mx-auto" />
         <ContentDescription
@@ -25,7 +22,7 @@ const { data } = Astro.props as { data: FaqData };
             class="text-primary-lighter text-center mx-auto"
         />
 
-        <div class="my-10 space-y-3 md:px-15">
+        <div class="my-10 space-y-3">
             {
                 data.items.map((item) => (
                     <details class="faq-item rounded-lg border-2 border-dark/20 hover:border-dark/50 transition-all duration-500 cursor-pointer select-none">
