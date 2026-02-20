@@ -18,33 +18,33 @@ export interface RealizationData {
 
 export const REALIZATION_TOUR: RealizationData = {
     id: "process",
-    header: "Zalety",
-    subHeader: "Dlaczego warto?",
+    header: "Realizacja",
+    subHeader: "Jak przebiega realizacja",
     description: "Wirtualny spacer to dziś coś więcej niż dodatek do oferty. To przemyślane narzędzie komunikacji, które odpowiada na oczekiwania współczesnych klientów. Sprawdź, co zyskujesz, wdrażając to rozwiązanie w swojej ofercie.",
     image: img1,
     items: [
         {
-            title: "Wyróżniasz się spośród konkurencji",
+            title: "Konsultacja",
             description:
-                "Większość ofert nadal ogranicza się do zwykłych zdjęć, więc Twoja prezentacja od razu przyciągnie uwagę klientów.",
+                "Rozpoczynamy od krótkiej rozmowy, podczas której poznajemy Twój obiekt, cele biznesowe oraz sposób wykorzystania wirtualnego spaceru. Doradzamy najlepsze rozwiązania i ustalamy zakres realizacji oraz termin sesji.",
             number: "01",
         },
         {
-            title: "Budujesz zaufanie i profesjonalny wizerunek",
+            title: "Sesja zdjęciowa",
             description:
-                "Pokazując nieruchomość w pełni, dasz klientowi pewność co do jakości i wyglądu miejsca.",
+                "W ustalonym dniu wykonujemy serię zdjęć panoramicznych 360° w Twoim obiekcie. Dbamy o odpowiednie kadry, światło i spójność ujęć, tak aby przestrzeń prezentowała się naturalnie i atrakcyjnie.",
             number: "02",
         },
         {
-            title: "Klienci „wchodzą” do Twojej przestrzeni",
+            title: "Postprodukcja",
             description:
-                "Dzięki pełnemu doświadczeniu 360°, można swobodnie zwiedzić obiekt z dowolnego miejsca i o dowolnej porze.",
+                "Po sesji przystępujemy do precyzyjnej obróbki materiału. Łączymy panoramy, korygujemy kolory, retuszujemy niedoskonałości i budujemy płynny, intuicyjny spacer z elementami interaktywnymi.",
             number: "03",
         },
         {
-            title: "Pomagasz klientowi „poczuć” klimat miejsca",
+            title: "Publikacja",
             description:
-                "Wirtualny spacer pozwala lepiej wyobrazić sobie układ, wielkość i charakter apartamentu, co zwiększa szansę na rezerwację.",
+                "Gotowy spacer udostępniamy w formie linku lub integrujemy bezpośrednio z Twoją stroną internetową, wizytówką Google oraz mediami społecznościowymi. Otrzymujesz gotowe narzędzie do prezentacji swojej przestrzeni.",
             number: "04",
         },
     ],
