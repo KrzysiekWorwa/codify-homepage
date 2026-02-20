@@ -10,7 +10,7 @@ const homeHref = resolveHref(nav.homeHref ?? "#home");
 
 <footer class="bg-dark pb-10 md:pb-15 flex flex-col">
     <div
-        class="px-20 py-10 md:py-15 flex flex-col md:flex-row items-center justify-between gap-7"
+        class="px-10 py-10 md:py-15 flex flex-col lg:flex-row items-center justify-between gap-7"
     >
         <a
             href={homeHref}
@@ -28,12 +28,12 @@ const homeHref = resolveHref(nav.homeHref ?? "#home");
             </p>
         </a>
 
-        <div class="flex flex-col md:flex-row gap-3 md:gap-7 items-center">
+        <div class="flex flex-col min-[850px]:flex-row gap-3 min-[850px]:gap-7 items-center">
             {
                 nav.menu.map((item) => (
                     <a
                         href={item.href}
-                        class="text-secondary text-xl font-medium hover:text-accent transition-colors duration-500 ease"
+                        class="text-secondary text-center text-xl font-medium hover:text-accent transition-colors duration-500 ease"
                     >
                         {item.label}
                     </a>
@@ -55,7 +55,7 @@ const homeHref = resolveHref(nav.homeHref ?? "#home");
             <p>Loga fb itp</p>
         </div>
     </div>
-    <div class="h-0.5 bg-secondary/40 mx-5 md:mx-20"></div>
+    <div class="h-0.5 bg-secondary/40 mx-5 md:mx-10"></div>
     <div
         class="text-secondary flex flex-col md:flex-row gap-3 md:gap-7 items-center justify-center pt-3 md:pt-8"
     >
