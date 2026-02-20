@@ -11,12 +11,15 @@ import DescriptionSection from "../components/DescriptionSection.astro";
 import { FAQ_TOUR } from "../content/faq";
 import { DESCRIPTION_TOUR } from "../content/offerDescription";
 import { ADVANTAGES_TOUR } from "../content/advantages";
+import Realization from "../components/Realization.astro";
+import { REALIZATION_TOUR } from "../content/realization";
 ---
 
 <Layout nav={NAV_TOUR}>
     <Hero data={HERO_TOUR} />
     <DescriptionSection data={DESCRIPTION_TOUR} />
     <AdvantagesSection data={ADVANTAGES_TOUR} />
+    <Realization data={REALIZATION_TOUR} />
     <Portfolio data={PORTFOLIO_TOUR} />
     <FaqSection data={FAQ_TOUR} />
 </Layout>

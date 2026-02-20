@@ -20,15 +20,15 @@ const { data } = Astro.props as { data: AdvantagesData };
         />
         <div
             data-aos="fade-up"
-            class="pt-5 md:p-5 md:pt-15 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4 md:gap-5 justify-center"
+            class="pt-5 md:p-5 md:pt-15 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4 md:gap-5 justify-center auto-rows-fr"
         >
             {
                 data.items.map((item) => {
                     const Icon = item.icon;
 
                     return (
-                        <div class=" bg-primary p-5 transition-all duration-300 text-secondary hover:scale-[1.03] h-full shadow-lg rounded-lg">
-                            <div class="flex flex-col items-center gap-5">
+                        <div class=" bg-primary p-5 transition-all duration-300 text-secondary hover:scale-[1.03] h-full shadow-lg rounded-lg flex flex-col">
+                            <div class="flex flex-col items-center gap-5 flex-1">
                                 <div>
                                     <Icon class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300" />
                                 </div>

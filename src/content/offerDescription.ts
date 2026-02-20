@@ -15,7 +15,7 @@ export interface DescriptionData {
 export const DESCRIPTION_TOUR: DescriptionData = {
     id: "service",
     header: "O usłudze",
-    subHeader: "Czym dokładnie jest wirtualny spacer?",
+    subHeader: "Czym jest wirtualny spacer?",
     description:
         "To interaktywna prezentacja, która pozwala użytkownikowi eksplorować przestrzeń fizyczną tak, jakby był w niej obecny, ale z poziomu komputera, telefonu komórkowego lub VR. Opiera się na wysokiej jakości zdjęciach sferycznych 360°, które są ze sobą płynnie połączone, umożliwiając swobodne przechodzenie z pomieszczenia do pomieszczenia oraz rozglądanie się w dowolnym kierunku. Technologia ta znajduje zastosowanie m.in. w branży nieruchomości, hotelarstwie, turystyce czy marketingu, pozwalając w realistyczny sposób zaprezentować wnętrza i obiekty. Wirtualny spacer oferuje interaktywne punkty z dodatkowymi informacjami, zdjęciami lub materiałami wideo, tworząc angażującą i nowoczesną formę prezentacji. To skuteczny sposób, by pokazać więcej niż zwykłe zdjęcia, budować zaufanie i podkreślić profesjonalny charakter oferty.",
     listHeader: "Jak to działa w praktyce?",
