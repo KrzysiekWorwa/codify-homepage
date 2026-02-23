@@ -31,21 +31,7 @@ export const NAV_MAIN: NavData = {
   cta: { label: "Kontakt", href: "#contact" },
 };
 
-export const NAV_WEB: NavData = {
-  homeHref: "",
-  menu: [
-    { label: "Strona główna", href: "" },
-    { label: "Start", href: "#home" },
-    { label: "O usłudze", href: "#service" },
-    { label: "Zalety", href: "#advantages" },
-    { label: "Realizacja", href: "#process" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Pytania", href: "#faq" },
-  ],
-  cta: { label: "Kontakt", href: "#contact" },
-};
-
-export const NAV_TOUR: NavData = {
+export const NAV_SERVICE: NavData = {
   homeHref: "",
   menu: [
     { label: "Strona główna", href: "" },

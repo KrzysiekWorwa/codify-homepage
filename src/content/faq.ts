@@ -145,3 +145,42 @@ export const FAQ_TOUR: FaqData = {
         },
     ],
 };
+
+export const FAQ_GRAPHIC: FaqData = {
+    id: "faq",
+    header: "FAQ",
+    subHeader: "Najczęstsze pytania",
+    description: "Zebraliśmy odpowiedzi na pytania, które najczęściej pojawiają się przed startem współpracy.",
+    ctaHeader: "Masz więcej pytań?",
+    ctaDescription: "Nie znalazłeś odpowiedzi na swoje pytanie lub masz ich więcej? Napisz do nas, z przyjemnością odpowiemy na wszystkie z nich.",
+    button: {
+        href: "#contact",
+        label: "Kontakt",
+    },
+    items: [
+        {
+            q: "Co jest potrzebne do wykonania wizualizacji 3D?",
+            a: "Najczęściej potrzebujemy rzutów (2D), wymiarów, informacji o materiałach i kolorach oraz inspiracji (moodboard). Jeśli posiadasz model 3D, możemy go wykorzystać i przyspieszyć realizację.",
+        },
+        {
+            q: "Ile trwa wykonanie wizualizacji 3D?",
+            a: "Zwykle od kilku dni do 2 tygodni, w zależności od liczby ujęć, stopnia skomplikowania projektu i szybkości akceptacji. Po briefie przedstawiamy konkretny harmonogram.",
+        },
+        {
+            q: "Czy mogę zgłosić poprawki do wizualizacji?",
+            a: "Tak. Na każdym etapie konsultujemy postępy i wprowadzamy ustalone korekty, aby finalny efekt był zgodny z koncepcją i oczekiwaniami.",
+        },
+        {
+            q: "Jakie rodzaje wizualizacji wykonujecie?",
+            a: "Tworzymy wizualizacje wnętrz, budynków (elewacje), ujęcia inwestycji oraz koncepcje produktowe. Dobieramy styl i kadry pod cel marketingowy projektu.",
+        },
+        {
+            q: "W jakiej jakości otrzymam finalne pliki?",
+            a: "Przekazujemy gotowe rendery w wysokiej rozdzielczości, przygotowane do wykorzystania na stronie internetowej, w social mediach oraz materiałach sprzedażowych.",
+        },
+        {
+            q: "Czy wizualizacje nadają się do kampanii reklamowych i sprzedaży?",
+            a: "Tak. Wizualizacje 3D świetnie sprawdzają się w marketingu, pozwalają pokazać finalny efekt przed realizacją i przyciągają uwagę w reklamach oraz ofertach sprzedażowych.",
+        },
+    ],
+};

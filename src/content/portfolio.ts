@@ -219,3 +219,45 @@ export const PORTFOLIO_TOUR: PortfolioData = {
         },
     ],
 };
+
+export const PORTFOLIO_GRAPHIC: PortfolioData = {
+    id: "portfolio",
+    header: "Portfolio",
+    subHeader: "Wizaualizacje 3D w praktyce",
+    description:
+        "Zobacz, jak wizualizacje 3D pozwalają zaprezentować projekt w realistycznej i dopracowanej formie jeszcze przed jego realizacją",
+    items: [
+        {
+            category: "Wizualizacja 3D",
+            title: "Wizualizacja konceptu marketingowego",
+            description: "Fotorealistyczne przedstawienie produktu, idealne do materiałów promocyjnych i reklam",
+            href: "https://www.artstation.com/artwork/qJmG2R",
+            image: img3,
+            label: "Odwiedź galerię",
+        },
+        {
+            category: "Wizualizacja 3D",
+            title: "Wizualizacja układu baru na festiwal",
+            description: "Przestrzenny projekt strefy eventowej ułatwiający planowanie logistyki i sprzedaży",
+            href: "https://www.artstation.com/artwork/Jr1KEa",
+            image: img6,
+            label: "Odwiedź galerię",
+        },
+        {
+            category: "Wizualizacja 3D",
+            title: "Wizualizacja konceptu tacki na alkohol",
+            description: "Realistyczne rendery do marketingu i przedsprzedaży",
+            href: "https://www.artstation.com/artwork/P6RvOB",
+            image: img9,
+            label: "Odwiedź galerię",
+        },
+        {
+            category: "Wizualizacja 3D",
+            title: "Wizualizacja dj-ki na imprezę marketingową",
+            description: "Koncepcyjne przedstawienie stanowiska muzycznego w nowoczesnym, eventowym stylu",
+            href: "https://www.artstation.com/artwork/lGeW9O",
+            image: img12,
+            label: "Odwiedź galerię",
+        },
+    ],
+};

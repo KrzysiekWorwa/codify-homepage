@@ -6,20 +6,20 @@ import Portfolio from "../components/Portfolio.astro";
 import FaqSection from "../components/FaqSection.astro";
 import Realization from "../components/Realization.astro";
 import DescriptionSection from "../components/DescriptionSection.astro";
-import { FAQ_TOUR } from "../content/faq";
+import { FAQ_GRAPHIC } from "../content/faq";
 import { DESCRIPTION_GRAPHIC } from "../content/offerDescription";
 import { ADVANTAGES_GRAPHIC } from "../content/advantages";
-import { REALIZATION_TOUR } from "../content/realization";
-import { NAV_TOUR } from "../content/menuItems";
+import { REALIZATION_GRAPHIC } from "../content/realization";
+import { NAV_SERVICE } from "../content/menuItems";
 import { HERO_GRAPHIC } from "../content/hero";
-import { PORTFOLIO_TOUR } from "../content/portfolio";
+import { PORTFOLIO_GRAPHIC } from "../content/portfolio";
 ---
 
-<Layout nav={NAV_TOUR}>
+<Layout nav={NAV_SERVICE}>
     <Hero data={HERO_GRAPHIC} />
     <DescriptionSection data={DESCRIPTION_GRAPHIC} />
     <AdvantagesSection data={ADVANTAGES_GRAPHIC} />
-    <Realization data={REALIZATION_TOUR} />
-    <Portfolio data={PORTFOLIO_TOUR} />
-    <FaqSection data={FAQ_TOUR} />
+    <Realization data={REALIZATION_GRAPHIC} />
+    <Portfolio data={PORTFOLIO_GRAPHIC} />
+    <FaqSection data={FAQ_GRAPHIC} />
 </Layout>
