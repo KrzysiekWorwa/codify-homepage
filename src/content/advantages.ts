@@ -6,6 +6,14 @@ import ChartIcon from "../assets/icons/tour/chart_data.svg";
 import ClockIcon from "../assets/icons/tour/clock_arrow_up.svg";
 import SearchIcon from "../assets/icons/tour/person_search.svg";
 import RocketIcon from "../assets/icons/tour/rocket_launch.svg";
+import IndividualIcon from "../assets/icons/web/cards_star.svg"
+import CodeIcon from "../assets/icons/web/code_off.svg"
+import BoltIcon from "../assets/icons/web/bolt.svg"
+import SlidersIcon from "../assets/icons/web/display_settings.svg"
+import UpIcon from "../assets/icons/web/person_search.svg"
+import PersonIcon from "../assets/icons/web/shield_person.svg"
+import ResponsiveIcon from "../assets/icons/web/mobile_code.svg"
+import ComplexIcon from "../assets/icons/web/list_alt_check.svg"
 
 type IconComponent = typeof StarIcon;
 
@@ -22,6 +30,63 @@ export interface AdvantagesData {
     description: string;
     items: AdvantageItem[];
 }
+
+export const ADVANTAGES_WEB: AdvantagesData = {
+    id: "advantages",
+    header: "Zalety",
+    subHeader: "Dlaczego warto?",
+    description: "Nowoczesna strona internetowa to fundament obecności w sieci. To nie tylko estetyka, ale przede wszystkim wydajność, widoczność i realne wsparcie rozwoju biznesu. Sprawdź, co zyskujesz, wybierając indywidualnie tworzoną stronę WWW.",
+    items: [
+        {
+            title: "Unikalny projekt bez szablonów",
+            description:
+                "Większość firm korzysta z gotowych szablonów, indywidualny projekt pozwala wyróżnić Twoją markę na tle konkurencji i podkreśla profesjonalizm.",
+            icon: IndividualIcon,
+        },
+        {
+            title: "Brak zbędnego kodu i wtyczek",
+            description:
+                "Brak zbędnych wtyczek i ciężkich motywów oznacza lepszą wydajność, stabilność oraz łatwiejszą rozbudowę w przyszłości.",
+            icon: CodeIcon,
+        },
+        {
+            title: "Maksymalna wydajność",
+            description:
+                "Szybsze ładowanie strony oznacza lepsze doświadczenie użytkownika i wyższe wyniki w Google PageSpeed oraz Core Web Vitals.",
+            icon: BoltIcon,
+        },
+        {
+            title: "Pełna kontrola nad projektem",
+            description:
+                "Każdy element od układu po animacje jest tworzony indywidualnie, bez ograniczeń narzucanych przez gotowe szablony.",
+            icon: SlidersIcon,
+        },
+        {
+            title: "Lepsza widoczność w Google",
+            description:
+                "Optymalizacja SEO od podstaw zwiększa szanse na wysoką pozycję w wynikach wyszukiwania i pozyskiwanie nowych klientów.",
+            icon: UpIcon,
+        },
+        {
+            title: "Profesjonalny wizerunek online",
+            description:
+                "Nowoczesny design i dopracowane detale budują zaufanie oraz wiarygodność Twojej firmy w oczach klientów.",
+            icon: PersonIcon,
+        },
+        {
+            title: "Pełna responsywność",
+            description:
+                "Projekt dopasowany do smartfonów, tabletów i komputerów zapewnia spójne działanie na każdym urządzeniu.",
+            icon: ResponsiveIcon,
+        },
+        {
+            title: "Kompleksowa realizacja",
+            description:
+                "Prowadzimy projekt od pierwszej koncepcji i grafiki, przez kodowanie, aż po uruchomienie strony. Dbamy o detale, wydajność i optymalizację na każdym etapie.",
+            icon: ComplexIcon,
+        },
+    ],
+};
 
 export const ADVANTAGES_TOUR: AdvantagesData = {
     id: "advantages",

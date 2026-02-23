@@ -12,6 +12,33 @@ export interface DescriptionData {
     bullets: DescriptionBullet[];
 }
 
+export const DESCRIPTION_WEB: DescriptionData = {
+    id: "service",
+    header: "O usłudze",
+    subHeader: "Tworzenie stron internetowych",
+    description:
+        "Strona internetowa to fundament marketingu online, miejsce, do którego prowadzą reklamy, media społecznościowe i Google. Jest głównym źródłem informacji o Twojej firmie i miejscem, gdzie klient podejmuje decyzję o kontakcie lub współpracy. W internecie pierwsze wrażenie ma kluczowe znaczenie dlatego projektujemy i tworzymy nowoczesne strony internetowe, które łączą estetykę z funkcjonalnością i realnym wsparciem sprzedaży. Każdy projekt powstaje indywidualnie, bez gotowych szablonów, w oparciu o potrzeby marki, grupę docelową oraz cele biznesowe. Strony są w pełni responsywne, zoptymalizowane pod kątem szybkości działania i SEO, dzięki czemu nie tylko świetnie wyglądają, ale również są widoczne w wyszukiwarkach. Dbamy o przejrzystą strukturę, intuicyjną nawigację oraz przemyślany układ treści, aby użytkownik w naturalny sposób przechodził od pierwszego wejścia do kontaktu lub zakupu. To nowoczesne narzędzie, które buduje wizerunek, wzmacnia wiarygodność i pomaga rozwijać biznes online.",
+    listHeader: "Jak to działa w praktyce?",
+    bullets: [
+        {
+            title: "Indywidualny projekt",
+            text: "Strona to wizytówka Twojej marki w internecie, dlatego każda realizacja powstaje od podstaw z uwzględnieniem identyfikacji wizualnej, branży i celów biznesowych. Dbamy o detale, estetykę i spójność, które budują zaufanie oraz profesjonalny wizerunek.",
+        },
+        {
+            title: "Szybkość i optymalizacja",
+            text: "Strona jest zoptymalizowana pod kątem wydajności oraz SEO, co wpływa na lepszą widoczność w Google i wyższą konwersję.",
+        },
+        {
+            title: "Responsywność",
+            text: "Projekt dopasowany do każdego urządzenia – smartfona, tabletu i komputera – z zachowaniem pełnej funkcjonalności.",
+        },
+        {
+            title: "Kompleksowa realizacja",
+            text: "Od analizy potrzeb, przez projekt graficzny, aż po wdrożenie i publikację – cały proces realizowany jest w sposób uporządkowany i transparentny.",
+        }
+    ],
+};
+
 export const DESCRIPTION_TOUR: DescriptionData = {
     id: "service",
     header: "O usłudze",

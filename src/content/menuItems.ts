@@ -35,11 +35,12 @@ export const NAV_WEB: NavData = {
   homeHref: "",
   menu: [
     { label: "Strona główna", href: "" },
-    { label: "Home", href: "#home" },
-    { label: "Oferta", href: "#oferta" },
-    { label: "Proces", href: "#proces" },
-    { label: "Cennik", href: "#cennik" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Start", href: "#home" },
+    { label: "O usłudze", href: "#service" },
+    { label: "Zalety", href: "#advantages" },
+    { label: "Realizacja", href: "#process" },
+    { label: "Portfolio", href: "#portfolio" },
+    { label: "Pytania", href: "#faq" },
   ],
   cta: { label: "Kontakt", href: "#contact" },
 };

@@ -105,7 +105,7 @@ export const FAQ_TOUR: FaqData = {
     subHeader: "Najczęstsze pytania",
     description: "Zebraliśmy odpowiedzi na pytania, które najczęściej pojawiają się przed startem współpracy.",
     ctaHeader: "Masz więcej pytań?",
-    ctaDescription: "Nie znalazłeś odpowiedzi na swoje pytanie lub masz ich więcej? Napisz do nas, z przyjemnością odpowiemy na wszytskie z nich.",
+    ctaDescription: "Nie znalazłeś odpowiedzi na swoje pytanie lub masz ich więcej? Napisz do nas, z przyjemnością odpowiemy na wszystkie z nich.",
     button: {
         href: "#contact",
         label: "Kontakt",

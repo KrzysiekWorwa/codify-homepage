@@ -25,10 +25,10 @@ export const HERO_MAIN: HeroData = {
 
 export const HERO_WEB: HeroData = {
   id: "home",
-  h1: "Tworzenie stron internetowych",
-  h2: ["Szybkość", "SEO", "Nowoczesny design"],
+  h1: "Nowoczesne strony internetowe",
+  h2: ["Nowoczesny i responsywny design", "Profesjonalny wizerunek online", "Indywidualny projekt"],
   button: { href: "#contact", label: "Darmowa wycena" },
-  button2: { href: "#service", label: "Zobacz ofertę" },
+  button2: { href: "#service", label: "Szczegóły" },
 };
 
 export const HERO_TOUR: HeroData = {
