@@ -27,7 +27,7 @@ const { nav } = Astro.props as { nav: NavData };
                             {item.children.map((child) => (
                                 <a
                                     href={resolveHref(child.href)}
-                                    class={`w-full text-center text-secondary block py-1 text-base font-medium ${child.mobileOnly ? "lg:hidden" : ""}`}
+                                    class={`w-full text-center text-secondary block py-1 text-base font-medium leading-relaxed ${child.mobileOnly ? "lg:hidden" : ""}`}
                                 >
                                     {child.label}
                                 </a>
