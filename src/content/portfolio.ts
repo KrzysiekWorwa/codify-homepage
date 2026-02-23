@@ -139,9 +139,9 @@ export const PORTFOLIO_MAIN: PortfolioData = {
 export const PORTFOLIO_WEB: PortfolioData = {
     id: "portfolio",
     header: "Portfolio",
-    subHeader: "Tak wyróżniamy marki online",
+    subHeader: "Nasze strony internetowe w praktyce",
     description:
-        "Każdy projekt pokazuje to, co robimy najlepiej — zamieniamy ofertę w nowoczesne, wirtualne doświadczenie.",
+        "Zobacz realizacje stron internetowych zaprojektowanych i zakodowanych od podstaw. Każdy projekt to połączenie estetyki, wydajności i przemyślanej struktury dopasowanej do marki oraz jej celów biznesowych.",
     items: [
         {
             category: "WWW / Landing Page",

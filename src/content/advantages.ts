@@ -6,14 +6,14 @@ import ChartIcon from "../assets/icons/tour/chart_data.svg";
 import ClockIcon from "../assets/icons/tour/clock_arrow_up.svg";
 import SearchIcon from "../assets/icons/tour/person_search.svg";
 import RocketIcon from "../assets/icons/tour/rocket_launch.svg";
-import IndividualIcon from "../assets/icons/web/cards_star.svg"
-import CodeIcon from "../assets/icons/web/code_off.svg"
-import BoltIcon from "../assets/icons/web/bolt.svg"
-import SlidersIcon from "../assets/icons/web/display_settings.svg"
-import UpIcon from "../assets/icons/web/person_search.svg"
-import PersonIcon from "../assets/icons/web/shield_person.svg"
-import ResponsiveIcon from "../assets/icons/web/mobile_code.svg"
-import ComplexIcon from "../assets/icons/web/list_alt_check.svg"
+import IndividualIcon from "../assets/icons/web/cards_star.svg";
+import CodeIcon from "../assets/icons/web/code_off.svg";
+import BoltIcon from "../assets/icons/web/bolt.svg";
+import SlidersIcon from "../assets/icons/web/display_settings.svg";
+import UpIcon from "../assets/icons/web/person_search.svg";
+import PersonIcon from "../assets/icons/web/shield_person.svg";
+import ResponsiveIcon from "../assets/icons/web/mobile_code.svg";
+import ComplexIcon from "../assets/icons/web/list_alt_check.svg";
 
 type IconComponent = typeof StarIcon;
 

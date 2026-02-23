@@ -1,5 +1,6 @@
 import type { ImageMetadata } from "astro";
-import img1 from "../assets/images/portfolio/niedzica_4.webp"
+import img1 from "../assets/images/webrealization.webp";
+import img2 from "../assets/images/portfolio/niedzica_4.webp";
 
 export interface RealizationItem {
     title: string;
@@ -16,12 +17,47 @@ export interface RealizationData {
     items: RealizationItem[];
 }
 
+export const REALIZATION_WEB: RealizationData = {
+    id: "process",
+    header: "Realizacja",
+    subHeader: "Jak przebiega realizacja",
+    description:
+        "Tworzenie strony internetowej to uporządkowany proces, od poznania Twoich potrzeb, przez projekt graficzny i kodowanie, aż po publikację. Dzięki temu masz pełną kontrolę nad efektem i pewność, że strona będzie szybka, dopracowana i gotowa do działania.",
+    image: img1,
+    items: [
+        {
+            title: "Konsultacja i analiza",
+            description:
+                "Zaczynamy od rozmowy o Twojej branży, ofercie i celach strony. Ustalamy strukturę, funkcje, styl oraz zakres prac. Na tym etapie zbieramy materiały i proponujemy najlepsze rozwiązania.",
+            number: "01",
+        },
+        {
+            title: "Projekt graficzny (UI/UX)",
+            description:
+                "Przygotowujemy indywidualny projekt wyglądu strony, układ sekcji, typografię, kolory i elementy wizualne. Dbamy o czytelność, spójność z marką oraz wygodę użytkownika na telefonie i komputerze.",
+            number: "02",
+        },
+        {
+            title: "Kodowanie i wdrożenie",
+            description:
+                "Na podstawie zaakceptowanego projektu przystępujemy do kodowania strony od zera, tworząc każdy element indywidualnie. Wdrażamy animacje i funkcje ustalone na starcie oraz dbamy o czysty kod, szybkość działania i poprawną strukturę pod SEO.",
+            number: "03",
+        },
+        {
+            title: "Testy i publikacja",
+            description:
+                "Sprawdzamy działanie strony na różnych urządzeniach i przeglądarkach, optymalizujemy wydajność oraz dopracowujemy szczegóły. Po finalnej konsultacji i akceptacji uruchamiamy stronę online.",
+            number: "04",
+        },
+    ],
+};
+
 export const REALIZATION_TOUR: RealizationData = {
     id: "process",
     header: "Realizacja",
     subHeader: "Jak przebiega realizacja",
     description: "Wirtualny spacer to dziś coś więcej niż dodatek do oferty. To przemyślane narzędzie komunikacji, które odpowiada na oczekiwania współczesnych klientów. Sprawdź, co zyskujesz, wdrażając to rozwiązanie w swojej ofercie.",
-    image: img1,
+    image: img2,
     items: [
         {
             title: "Konsultacja",
