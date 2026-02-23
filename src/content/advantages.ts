@@ -10,10 +10,14 @@ import IndividualIcon from "../assets/icons/web/cards_star.svg";
 import CodeIcon from "../assets/icons/web/code_off.svg";
 import BoltIcon from "../assets/icons/web/bolt.svg";
 import SlidersIcon from "../assets/icons/web/display_settings.svg";
-import UpIcon from "../assets/icons/web/person_search.svg";
 import PersonIcon from "../assets/icons/web/shield_person.svg";
 import ResponsiveIcon from "../assets/icons/web/mobile_code.svg";
 import ComplexIcon from "../assets/icons/web/list_alt_check.svg";
+import DiamondIcon from "../assets/icons/3d/diamond.svg";
+import ShakeIcon from "../assets/icons/3d/handshake.svg";
+import WarehouseIcon from "../assets/icons/3d/warehouse.svg";
+import SupportIcon from "../assets/icons/3d/add_chart.svg";
+import StarsIcon from "../assets/icons/3d/stars_2.svg";
 
 type IconComponent = typeof StarIcon;
 
@@ -65,7 +69,7 @@ export const ADVANTAGES_WEB: AdvantagesData = {
             title: "Lepsza widoczność w Google",
             description:
                 "Optymalizacja SEO od podstaw zwiększa szanse na wysoką pozycję w wynikach wyszukiwania i pozyskiwanie nowych klientów.",
-            icon: UpIcon,
+            icon: SearchIcon,
         },
         {
             title: "Profesjonalny wizerunek online",
@@ -141,6 +145,64 @@ export const ADVANTAGES_TOUR: AdvantagesData = {
             description:
                 "Możesz wykorzystać spacer na stronie, w mediach społecznościowych lub Google Street View.",
             icon: RocketIcon,
+        },
+    ],
+};
+
+export const ADVANTAGES_GRAPHIC: AdvantagesData = {
+    id: "advantages",
+    header: "Zalety",
+    subHeader: "Dlaczego warto?",
+    description:
+        "Wizualizacje 3D umożliwiają realistyczne odwzorowanie projektu jeszcze przed jego realizacją. Pozwalają ocenić proporcje, materiały i detale bez konieczności budowy fizycznego prototypu. To efektywne narzędzie wspierające proces sprzedaży i prezentacji inwestycji.",
+    items: [
+        {
+            title: "Sprzedaż przed realizacją",
+            description:
+                "Możesz prezentować i promować inwestycję zanim fizycznie powstanie. To ogromna przewaga w branży deweloperskiej i marketingowej.",
+            icon: ChartIcon,
+        },
+        {
+            title: "Fotorealistyczna jakość",
+            description:
+                "Realistyczne światło, materiały i detale sprawiają, że wizualizacje wyglądają jak profesjonalne fotografie gotowego obiektu.",
+            icon: DiamondIcon,
+        },
+        {
+            title: "Silniejsze pierwsze wrażenie",
+            description:
+                "Dopracowana prezentacja projektu buduje profesjonalny wizerunek i zwiększa zaufanie klientów oraz inwestorów.",
+            icon: ShakeIcon,
+        },
+        {
+            title: "Lepsze zrozumienie projektu",
+            description:
+                "Klient może dokładnie zobaczyć układ przestrzeni, proporcje oraz charakter inwestycji, co ułatwia podjęcie decyzji.",
+            icon: WarehouseIcon,
+        },
+        {
+            title: "Skuteczne narzędzie marketingowe",
+            description:
+                "Wizualizacje możesz wykorzystać na stronie internetowej, w materiałach sprzedażowych, social mediach oraz kampaniach reklamowych.",
+            icon: RocketIcon,
+        },
+        {
+            title: "Wsparcie dla marketingu i sprzedaży",
+            description:
+                "Wizualizacje 3D stanowią silne wsparcie kampanii marketingowych, pomagając atrakcyjnie zaprezentować ofertę klientom, inwestorom oraz partnerom biznesowym.",
+            icon: SupportIcon,
+        },
+        {
+            title: "Oszczędność czasu i kosztów",
+            description:
+                "Możliwość wprowadzania zmian na etapie projektu eliminuje kosztowne poprawki na etapie realizacji inwestycji.",
+            icon: ClockIcon,
+        },
+        {
+            title: "Przewaga konkurencyjna",
+            description:
+                "Nowoczesna, realistyczna prezentacja inwestycji wyróżnia Twoją ofertę na tle konkurencji.",
+            icon: StarsIcon,
         },
     ],
 };

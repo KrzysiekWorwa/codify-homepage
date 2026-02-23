@@ -38,3 +38,11 @@ export const HERO_TOUR: HeroData = {
   button: { href: "#contact", label: "Darmowa wycena" },
   button2: { href: "#service", label: "Szczegóły" },
 };
+
+export const HERO_GRAPHIC: HeroData = {
+  id: "home",
+  h1: "Realistyczne wizualizacje 3D",
+  h2: ["Prezentacja koncepcji przed realizacją", "Fotorealistyczna jakość detali", "Gotowe do prezentacji i sprzedaży"],
+  button: { href: "#contact", label: "Darmowa wycena" },
+  button2: { href: "#service", label: "Szczegóły" },
+};

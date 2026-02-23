@@ -65,3 +65,30 @@ export const DESCRIPTION_TOUR: DescriptionData = {
         },
     ],
 };
+
+export const DESCRIPTION_GRAPHIC: DescriptionData = {
+    id: "service",
+    header: "O usłudze",
+    subHeader: "Wizualizacje 3D",
+    description:
+        "Wizualizacje 3D to fotorealistyczna prezentacja projektów architektonicznych, wnętrz oraz koncepcji produktowych jeszcze przed ich realizacją. To skuteczne narzędzie sprzedaży i marketingu, które pozwala zaprezentować inwestycję w atrakcyjnej, dopracowanej formie. Tworzymy realistyczne obrazy z dbałością o światło, materiały i detale, dzięki czemu odbiorca może zobaczyć projekt tak, jakby już istniał. Rozwiązanie to znajduje zastosowanie w branży deweloperskiej, architektonicznej oraz marketingowej, pomagając budować zainteresowanie i zaufanie jeszcze przed wprowadzeniem produktu na rynek.",
+    listHeader: "Jak to działa w praktyce?",
+    bullets: [
+        {
+            title: "Analiza projektu",
+            text: "Na podstawie rzutów architektonicznych, wymiarów oraz wytycznych stylistycznych opracowujemy koncepcję wizualną dopasowaną do charakteru projektu.",
+        },
+        {
+            title: "Modelowanie 3D",
+            text: "Tworzymy trójwymiarowy model obiektu, przestrzeni lub budynku, odwzorowując proporcje, materiały i układ zgodnie z dokumentacją techniczną.",
+        },
+        {
+            title: "Fotorealistyczne renderowanie",
+            text: "Dbamy o realistyczne oświetlenie, tekstury i detale, aby wizualizacja wyglądała jak profesjonalna fotografia gotowego obiektu.",
+        },
+        {
+            title: "Gotowe materiały marketingowe",
+            text: "Otrzymujesz wysokiej jakości wizualizacje, które możesz wykorzystać na stronie internetowej, w materiałach sprzedażowych oraz kampaniach reklamowych.",
+        }
+    ],
+};
