@@ -31,7 +31,7 @@ export const FAQ_MAIN: FaqData = {
     items: [
         {
             q: "Jak wyglądają kroki rozpoczęcia współpracy i proces projektowy?",
-            a: "Nasz proces jest ustrukturyzowany: 1. Darmowa konsultacja i wywiad, podczas którego poznajemy Twoje cele biznesowe i grupę docelową. 2. Zebranie materiałów (logotypy, teksty, inspiracje). 3. Przygotowanie strategii i makiety. 4. Podpisanie umowy i wpłata zaliczki. 5. Realizacja projektu z regularnymi aktualizacjami postępów. Dzięki temu masz pełną kontrolę nad efektem końcowym.",
+            a: "Zaczynamy od bezpłatnej konsultacji, podczas której poznajemy Twoje cele i potrzeby. Następnie ustalamy zakres prac, podpisujemy umowę i przechodzimy do realizacji. Na każdym etapie masz wgląd w postępy i możliwość zgłaszania uwag.",
         },
         {
             q: "Ile trwa realizacja strony internetowej?",
@@ -42,8 +42,12 @@ export const FAQ_MAIN: FaqData = {
             a: "Oczywiście. Jeśli nie posiadasz profesjonalnych zdjęć czy gotowych tekstów, przeprowadzimy Cię przez ten proces. Doradzamy, jakie treści najlepiej sprzedają w Twojej branży, a w przypadku wirtualnych spacerów i wizualizacji — precyzyjnie określamy, jakie dane techniczne będą nam potrzebne.",
         },
         {
+            q: "Czy mogę zgłaszać poprawki w trakcie realizacji?",
+            a: "Tak. Projekt realizujemy etapami, a każdy z nich konsultujemy z Tobą. W ramach ustalonego zakresu możesz zgłaszać uwagi i korekty."
+        },
+        {
             q: "Czy realizujecie zlecenia w całej Polsce?",
-            a: "Strony WWW oraz wizualizacje 3D tworzymy zdalnie, współpracując z klientami z całego kraju i zagranicy za pomocą wideokonferencji. W przypadku wirtualnych spacerów 360°, dojeżdżamy bezpośrednio do Twojego obiektu po wcześniejszym ustaleniu dogodnego terminu sesji.",
+            a: "Strony WWW oraz wizualizacje 3D tworzymy zdalnie, współpracując z klientami z całego kraju i zagranicy. W przypadku wirtualnych spacerów 360°, dojeżdżamy bezpośrednio do Twojego obiektu po wcześniejszym ustaleniu dogodnego terminu sesji.",
         },
         {
             q: "Czym różni się wirtualny spacer 360° od galerii zdjęć?",
@@ -60,7 +64,7 @@ export const FAQ_MAIN: FaqData = {
         {
             q: "Co jeśli potrzebuję kompleksowego rozwiązania (np. strona + wizualizacje + spacer)?",
             a: "To nasze najczęstsze i najbardziej efektywne zlecenie. Tworzymy wtedy spójny ekosystem cyfrowy Twojej marki. Przy pakietach łączonych oferujemy dedykowane rabaty oraz gwarantujemy pełną spójność wizualną wszystkich materiałów marketingowych.",
-        }
+        },
     ],
 };
 
