@@ -34,6 +34,12 @@ export function initContactForms() {
                     message.classList.remove("opacity-0");
                     message.classList.add("opacity-100");
 
+                    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+                        window.gtag("event", "conversion", {
+                            send_to: "AW-18011986647/PstVCIKt0okcENe15IxD"
+                        });
+                    }
+
                     setTimeout(() => {
                         message.classList.remove("opacity-100");
                         message.classList.add("opacity-0");

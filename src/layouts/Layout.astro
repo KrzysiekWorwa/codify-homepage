@@ -35,7 +35,19 @@ const { nav, showContact = true } = Astro.props as {
         <meta property="og:image" content={SITE.seo.ogImage} />
         <meta property="og:url" content={SITE.url} />
         <meta name="generator" content={Astro.generator} />
-
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-18011986647"
+        ></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+            gtag("js", new Date());
+            gtag("config", "AW-18011986647");
+        </script>
         <script>
             import "../scripts/menu.ts";
             import AOS from "aos";
