@@ -30,7 +30,7 @@ export function initContactForms() {
 
                 if (response.ok) {
                     form.reset();
-                    message.textContent = "✅ Wiadomość została wysłana, dziękujemy za kontakt!";
+                    message.textContent = "Wiadomość została wysłana, dziękujemy za kontakt!";
                     message.classList.remove("opacity-0");
                     message.classList.add("opacity-100");
 

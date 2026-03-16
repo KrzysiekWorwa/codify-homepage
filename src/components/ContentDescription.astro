@@ -1,7 +1,13 @@
 ---
 const { text, class: className = "" } = Astro.props;
+
+const paragraphs = Array.isArray(text) ? text : [text];
 ---
 
-<p class={`text-lg md:text-2xl leading-tight ${className}`}>
-    {text}
-</p>
+<div class={`text-lg md:text-2xl leading-tight ${className}`}>
+  {paragraphs.map((paragraph) => (
+    <p class="mb-3 last:mb-0">
+      {paragraph}
+    </p>
+  ))}
+</div>

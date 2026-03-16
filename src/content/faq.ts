@@ -62,7 +62,7 @@ export const FAQ_MAIN: FaqData = {
             a: "Tak, to dla nas priorytet. Każdą stronę projektujemy zgodnie z wytycznymi Core Web Vitals. Dbamy o techniczne SEO (struktura nagłówków, alt-tagi, optymalizacja obrazów), dzięki czemu Twoja witryna jest szybka i gotowa do pozycjonowania w Google od pierwszego dnia.",
         },
         {
-            q: "Co jeśli potrzebuję kompleksowego rozwiązania (np. strona + wizualizacje + spacer)?",
+            q: "Co jeśli potrzebuję kompleksowego rozwiązania (np. strona + spacer)?",
             a: "To nasze najczęstsze i najbardziej efektywne zlecenie. Tworzymy wtedy spójny ekosystem cyfrowy Twojej marki. Przy pakietach łączonych oferujemy dedykowane rabaty oraz gwarantujemy pełną spójność wizualną wszystkich materiałów marketingowych.",
         },
     ],
@@ -74,7 +74,7 @@ export const FAQ_WEB: FaqData = {
     subHeader: "Najczęstsze pytania",
     description: "Zebraliśmy odpowiedzi na pytania, które najczęściej pojawiają się przed startem współpracy.",
     ctaHeader: "Masz więcej pytań?",
-    ctaDescription: "Nie znalazłeś odpowiedzi na swoje pytanie lub masz ich więcej? Napisz do nas, z przyjemnością odpowiemy na wszytskie z nich.",
+    ctaDescription: "Nie znalazłeś odpowiedzi na swoje pytanie lub masz ich więcej? Napisz do nas, z przyjemnością odpowiemy na wszystkie z nich.",
     button: {
         href: "#contact",
         label: "Kontakt",

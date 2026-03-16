@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { NAV_POLICY } from "../content/menuItems";
+import { PRIVACY_POLICY_PL } from "../content/policy";
+import ContentSubHeader from "../components/ContentSubHeader.astro";
+---
+
+<Layout nav={NAV_POLICY} showContact={false}>
+    <section
+        id={PRIVACY_POLICY_PL.id}
+        class="bg-secondary md:bg-radial-light scroll-mt-15 md:scroll-mt-22.5"
+    >
+        <div
+            data-aos="fade-up"
+            class="max-w-360 w-full flex flex-col items-center justify-center m-auto pb-5 pt-20 md:py-30 px-5"
+        >
+            <ContentSubHeader
+                text={PRIVACY_POLICY_PL.title}
+                class="gradient-dark"
+            />
+
+            <div class="w-full mt-8 text-primary wrap-break-words">
+                {
+                    PRIVACY_POLICY_PL.sections.map((section) => (
+                        <article class="w-full mb-10">
+                            <h2 class="text-xl md:text-2xl font-semibold mb-4">
+                                {section.title}
+                            </h2>
+
+                            {section.items.map((item) =>
+                                item.type === "text" ? (
+                                    <p class="mb-3 leading-relaxed">
+                                        {item.text}
+                                    </p>
+                                ) : (
+                                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                                        {item.items.map((li) => (
+                                            <li class="leading-relaxed">
+                                                {li}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ),
+                            )}
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+</Layout>

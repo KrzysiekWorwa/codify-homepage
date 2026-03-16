@@ -33,10 +33,20 @@
         class="w-full p-3 m-0 rounded-lg border-2 border-secondary/40 focus:outline-secondary/50"
     ></textarea>
     <p class="mt-2">
-        Wysyłając formularz, akceptujesz, że przetworzymy Twoje dane w celu
-        kontaktu i obsługi zapytania.
+        Wysyłając formularz, wyrażasz zgodę na przetwarzanie podanych danych w
+        celu kontaktu i obsługi zapytania, zgodnie z
+        <a
+            href="/polityka-prywatnosci/"
+            class="underline hover:text-accent transition-colors duration-500 ease"
+        >
+            Polityką prywatności
+        </a>.
     </p>
-
+    <div
+        data-form-message
+        class="mt-4 text-accent font-semibold opacity-0 transition-opacity duration-500"
+    >
+    </div>
     <button
         type="submit"
         class="px-5 py-2.5 my-4 text-lg md:text-xl rounded-lg text-center cursor-pointer self-start transition-colors duration-500 ease border-2 inline-block bg-accent border-accent text-secondary hover:bg-accent-hover hover:border-accent-hover"
@@ -44,11 +54,6 @@
         Wyślij
     </button>
 </form>
-<div
-    data-form-message
-    class="mt-4 text-green-600 font-semibold opacity-0 transition-opacity duration-500"
->
-</div>
 
 <script>
     import { initContactForms } from "../scripts/form";

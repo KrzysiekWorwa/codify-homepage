@@ -1,0 +1,37 @@
+<div
+    id="cookie-banner"
+    class="fixed bottom-0 left-0 w-full bg-primary text-secondary shadow-lg p-4 flex flex-col lg:flex-row items-center justify-center gap-2 z-50 hidden"
+>
+    <p class="text-center text-sm lg:text-base">
+        Ta strona wykorzystuje pliki cookies w celu poprawy działania serwisu
+        oraz analizy ruchu. Korzystając ze strony, wyrażasz zgodę na ich użycie
+        zgodnie z
+        <a
+            href="/polityka-prywatnosci/"
+            class="underline hover:text-accent transition-colors duration-500 ease"
+        >
+            Polityką prywatności
+        </a>.
+    </p>
+
+    <button
+        id="accept-cookies"
+        class="px-2.5 py-2.5 rounded-lg text-sm lg:text-base text-center cursor-pointer transition-colors duration-500 ease border-2 inline-block bg-accent border-accent text-secondary hover:bg-accent-hover hover:border-accent-hover"
+    >
+        Akceptuję
+    </button>
+</div>
+
+<script>
+    const banner = document.getElementById("cookie-banner");
+    const button = document.getElementById("accept-cookies");
+
+    if (!localStorage.getItem("cookiesAccepted")) {
+        banner?.classList.remove("hidden");
+    }
+
+    button?.addEventListener("click", () => {
+        localStorage.setItem("cookiesAccepted", "true");
+        banner?.classList.add("hidden");
+    });
+</script>

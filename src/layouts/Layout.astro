@@ -5,8 +5,12 @@ import { SITE } from "../content/site";
 import ContactSection from "../components/ContactSection.astro";
 import "../styles/global.css";
 import type { NavData } from "../content/menuItems";
+import CookieBanner from "../components/CookieBanner.astro";
 
-const { nav } = Astro.props as { nav: NavData };
+const { nav, showContact = true } = Astro.props as {
+    nav: NavData;
+    showContact?: boolean;
+};
 ---
 
 <html lang={SITE.lang}>
@@ -48,7 +52,8 @@ const { nav } = Astro.props as { nav: NavData };
         <main>
             <slot />
         </main>
-        <ContactSection />
+        {showContact && <ContactSection />}
         <Footer nav={nav} />
+        <CookieBanner />
     </body>
 </html>

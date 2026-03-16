@@ -15,7 +15,7 @@ import ContentDescription from "./ContentDescription.astro";
     >
         <ContentHeader text={ABOUT.header} class="text-secondary" />
         <div
-            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 items-center justify-center m-auto md:py-10"
+            class="grid grid-cols-1 gap-4 items-center justify-center m-auto"
         >
             <div>
                 <ContentSubHeader
@@ -25,7 +25,7 @@ import ContentDescription from "./ContentDescription.astro";
 
                 <ContentDescription
                     text={ABOUT.description}
-                    class="text-secondary text-center md:text-justify"
+                    class="text-secondary text-start md:text-justify"
                 />
                 {
                     (
@@ -40,7 +40,7 @@ import ContentDescription from "./ContentDescription.astro";
                 }
             </div>
 
-            <div class="w-full h-full overflow-hidden rounded-lg">
+            <div class="w-full h-full md:aspect-2/1 overflow-hidden rounded-lg pb-5">
                 <Picture
                     src={image}
                     alt="about"
