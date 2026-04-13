@@ -9,7 +9,7 @@ import Form from "./Form.astro";
 <section id={CONTACT.id} class="bg-radial-dark scroll-mt-15 md:scroll-mt-22.5">
     <div
         data-aos="fade-up"
-        class="max-w-360 items-center justify-center m-auto py-10 md:py-30 px-5"
+        class="max-w-7xl items-center justify-center m-auto py-10 md:py-30 px-5"
     >
         <div
             class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-18 items-center justify-center m-auto"
@@ -32,7 +32,7 @@ import Form from "./Form.astro";
                     <Form />
                 </div>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col gap-2">
                 <div
                     class="flex flex-col min-[445px]:flex-row flex-wrap gap-2 justify-center text-secondary"
                 >
@@ -46,17 +46,19 @@ import Form from "./Form.astro";
                                     : `tel:${i.contact.replace(/\s+/g, "")}`;
 
                             return (
-                                <a
-                                    href={href}
-                                    class="flex-1 flex flex-col select-text gap-2 p-2 md:p-5 border-2 border-transparent rounded-lg hover:border-2 hover:border-secondary/40 transition-all duration-500 group"
+                                <div
+                                    
+                                    class="flex-1 flex flex-col gap-2 p-2 md:p-5 border-2 border-transparent rounded-lg hover:border-2 hover:border-secondary/40 transition-all duration-500 group"
                                 >
                                     <Icon class="w-8 h-8 transition-colors duration-500 group-hover:text-accent" />
                                     <h4 class="text-xl md:text-3xl font-semibold">
                                         {i.head}
                                     </h4>
                                     <p>{i.text}</p>
-                                    <p class="transition-colors duration-500 group-hover:text-accent">{i.contact}</p>
-                                </a>
+                                    <a  href={href}
+                                        class="w-fit transition-colors duration-500 group-hover:text-accent select-text">{i.contact}
+                                    </a>
+                                </div>
                             );
                         })
                     }
